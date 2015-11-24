@@ -141,11 +141,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue"{
             let imageViewController = segue.destinationViewController as! ImageViewController
-       //     imageViewController.newImage = capturedImage!
+            imageViewController.newImage = capturedImage!
             
             
         }
-        
     }
     func extractIphone6(){
         let scene = SCNScene(named: "iPhone 6Exported")

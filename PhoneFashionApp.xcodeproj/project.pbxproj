@@ -11,6 +11,8 @@
 		600B48471BF4D93E00A18134 /* Iphone 5cEdited.dae in Resources */ = {isa = PBXBuildFile; fileRef = 600B48461BF4D93E00A18134 /* Iphone 5cEdited.dae */; };
 		600B48491BF4E57E00A18134 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B48481BF4E57E00A18134 /* ImageViewController.swift */; };
 		60231A8C1BF10E5C00A62258 /* iPhone6Positioned.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60231A8B1BF10E5C00A62258 /* iPhone6Positioned.dae */; };
+		604579F31C04BB760072D05C /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604579F21C04BB760072D05C /* 1.jpg */; };
+		604579F51C04DB230072D05C /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604579F41C04DB230072D05C /* 04.jpg */; };
 		604E2D631BF23A45004054D5 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604E2D621BF23A45004054D5 /* dog.jpg */; };
 		604E2D671BF281E8004054D5 /* Diffuse Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604E2D661BF281E8004054D5 /* Diffuse Screen.jpg */; };
 		607D01A61BEE79B400C4C52B /* Iphone 5c-1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607D01A51BEE79B400C4C52B /* Iphone 5c-1.dae */; };
@@ -44,6 +46,8 @@
 		600B48461BF4D93E00A18134 /* Iphone 5cEdited.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Iphone 5cEdited.dae"; sourceTree = "<group>"; };
 		600B48481BF4E57E00A18134 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		60231A8B1BF10E5C00A62258 /* iPhone6Positioned.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = iPhone6Positioned.dae; sourceTree = "<group>"; };
+		604579F21C04BB760072D05C /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		604579F41C04DB230072D05C /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		604E2D621BF23A45004054D5 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		604E2D661BF281E8004054D5 /* Diffuse Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Diffuse Screen.jpg"; sourceTree = "<group>"; };
 		607D01A51BEE79B400C4C52B /* Iphone 5c-1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Iphone 5c-1.dae"; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				600B48251BF3C4CC00A18134 /* iPhone 6Edited.dae */,
 				604E2D661BF281E8004054D5 /* Diffuse Screen.jpg */,
 				60231A8B1BF10E5C00A62258 /* iPhone6Positioned.dae */,
+				604579F21C04BB760072D05C /* 1.jpg */,
+				604579F41C04DB230072D05C /* 04.jpg */,
 				607D01A71BEF614600C4C52B /* iphone-6.jpg */,
 				604E2D621BF23A45004054D5 /* dog.jpg */,
 				80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */,
@@ -223,7 +229,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					80EE09B9196A4C4A00B77AB0 = {
@@ -260,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80EE09C5196A4C4A00B77AB0 /* Main.storyboard in Resources */,
+				604579F31C04BB760072D05C /* 1.jpg in Resources */,
 				600B48471BF4D93E00A18134 /* Iphone 5cEdited.dae in Resources */,
 				80A0126D196A52E100BB3146 /* EthanolScene.dae in Resources */,
 				604E2D631BF23A45004054D5 /* dog.jpg in Resources */,
@@ -269,6 +276,7 @@
 				607FE81C1BF7D0E600F99DF7 /* iPhone 6Exported.dae in Resources */,
 				607D01A81BEF614600C4C52B /* iphone-6.jpg in Resources */,
 				607FE81E1BF7D15C00F99DF7 /* iPhone 6.dae in Resources */,
+				604579F51C04DB230072D05C /* 04.jpg in Resources */,
 				80EE09C7196A4C4A00B77AB0 /* Images.xcassets in Resources */,
 				604E2D671BF281E8004054D5 /* Diffuse Screen.jpg in Resources */,
 			);
@@ -348,6 +356,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -415,6 +424,7 @@
 				INFOPLIST_FILE = CarbonVisualizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhoneFashionApp;
 			};
 			name = Debug;
@@ -427,6 +437,7 @@
 				INFOPLIST_FILE = CarbonVisualizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhoneFashionApp;
 			};
 			name = Release;
@@ -446,6 +457,7 @@
 				INFOPLIST_FILE = CarbonVisualizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhoneFashionApp;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -462,6 +474,7 @@
 				INFOPLIST_FILE = CarbonVisualizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhoneFashionApp;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

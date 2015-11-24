@@ -12,46 +12,87 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var scrollView: UIScrollView!
-   // var newImage: UIImage!
+    var newImage: UIImage!
     var imageView: UIImageView!
     var overlay: UIView!
     var someView: UIView!
+    var scrollViewNew: UIScrollView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        
+        
+        
+        scrollViewNew.addSubview(imageView)
 
-    
-    
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImage(named:"iphone-6.jpg")!
-        imageView = UIImageView(image: image)
+        
+        let image = UIImage(named:"04.jpg")!
+        imageView = UIImageView(image: newImage)
         imageView.frame = CGRect(origin: CGPointZero, size: image.size)
-        
-        scrollView.delegate = self
-        scrollView.addSubview(imageView)
-      //  scrollView.contentSize = image.size
-        
-        let doubleTap = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
-        doubleTap.numberOfTapsRequired = 2
-        doubleTap.numberOfTouchesRequired = 1
-        scrollView.addGestureRecognizer(doubleTap)
+        //scrollViewNew = UIScrollView(frame: CGRectMake(-100, -100, view.bounds.width + 100, view.bounds.height + 100))
+        scrollViewNew = UIScrollView(frame: CGRectMake(0, 0, view.bounds.width, view.bounds.height))
+        scrollViewNew.backgroundColor = UIColor.redColor()
+        scrollViewNew.delegate = self
+        //        scrollViewNew.contentInset = UIEdgeInsetsMake(<#T##top: CGFloat##CGFloat#>, <#T##left: CGFloat##CGFloat#>, <#T##bottom: CGFloat##CGFloat#>, <#T##right: CGFloat##CGFloat#>)
+        scrollViewNew.contentInset = UIEdgeInsetsMake(100, 200, 200, 200)
+       
         
         
-        let scrollViewFrame = scrollView.frame
-        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
-        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
-        let minScale = min(scaleWidth, scaleHeight)
-        scrollView.minimumZoomScale = minScale
+        scrollViewNew.contentSize = CGSizeMake(image.size.width + 1000, image.size.height + 1000)
+        // scrollViewNew.contentSize = imageView.bounds.size
+      //  scrollViewNew.contentMode = .ScaleAspectFill
+        //  scrollViewNew.contentSize = CGSizeMake(1000, 1000)
         
-        // 5
-        scrollView.maximumZoomScale = 1.0
-        scrollView.zoomScale = minScale
+        scrollViewNew.minimumZoomScale = 0.5
+        scrollViewNew.maximumZoomScale = 1.2
+        //scrollViewNew.clipsToBounds = true
+        scrollViewNew.bounces = false
+        view.addSubview(scrollViewNew)
         
+        
+//        let image = UIImage(named:"iphone-6.jpg")!
+//        scrollView.delegate = self
+//        //scrollView.contentInset = UIEdgeInsetsMake(100, 100, 70, 50)
+//        scrollView.contentSize = image.size
+//        scrollView.backgroundColor = UIColor.blackColor()
+//       
+//        imageView = UIImageView(image: image)
+//        imageView.frame = CGRect(origin: CGPointZero, size: image.size)
+//        scrollView.addSubview(imageView)
+//      //  scrollView.contentSize = image.size
+//        
+//        let doubleTap = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
+//        doubleTap.numberOfTapsRequired = 2
+//        doubleTap.numberOfTouchesRequired = 1
+//        scrollView.addGestureRecognizer(doubleTap)
+//        
+//        
+//        let scrollViewFrame = scrollView.frame
+//        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
+//        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
+//        let minScale = min(scaleWidth, scaleHeight)
+//       
+//        
+//        //correct the scrolling feature!!!!
+//        // scrollView.minimumZoomScale = minScale
+//        scrollView.minimumZoomScale = 0.5
+//        scrollView.maximumZoomScale = 1.2
+//        scrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+//        //scrollView.zoomScale = minScale
+////  
+//        self.automaticallyAdjustsScrollViewInsets = false
         //centerScrollViewContents()
         addOverlay()
         
        
         
     }
+    
     func addOverlay(){
         let offset: CGFloat = 40.0
         let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)
@@ -113,9 +154,17 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
-//    func scrollViewDidZoom(scrollView: UIScrollView) {
-//        centerScrollViewContents()
-//    }
+    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) {
+        scrollView.contentSize = CGSizeMake(imageView.image!.size.width + 2000, imageView.image!.size.height + 1000)
+        scrollViewNew.contentInset = UIEdgeInsetsMake(100, 200, 200, 200)
+        
+        
+        
+    }
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        centerScrollViewContents()
+        
+    }
     
     func centerScrollViewContents(){
         //centers the image in the center
@@ -138,6 +187,14 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         imageView.frame = contentsFrame
 
     }
+    
+//    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) {
+//        
+//        scrollViewNew.contentSize = CGSizeMake(self.view.bounds.width * scale, self.view.bounds.height * scale)
+//        
+//        
+//
+//    }
         func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         
         return imageView
