@@ -24,22 +24,22 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
         
         
-        scrollViewNew.addSubview(imageView)
-
+        
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+      
         let image = UIImage(named:"04.jpg")!
-        imageView = UIImageView(image: newImage)
+        imageView = UIImageView(image: image)
         imageView.frame = CGRect(origin: CGPointZero, size: image.size)
         //scrollViewNew = UIScrollView(frame: CGRectMake(-100, -100, view.bounds.width + 100, view.bounds.height + 100))
         scrollViewNew = UIScrollView(frame: CGRectMake(0, 0, view.bounds.width, view.bounds.height))
-        scrollViewNew.backgroundColor = UIColor.redColor()
+        scrollViewNew.backgroundColor = UIColor.blueColor()
         scrollViewNew.delegate = self
-        //        scrollViewNew.contentInset = UIEdgeInsetsMake(<#T##top: CGFloat##CGFloat#>, <#T##left: CGFloat##CGFloat#>, <#T##bottom: CGFloat##CGFloat#>, <#T##right: CGFloat##CGFloat#>)
-        scrollViewNew.contentInset = UIEdgeInsetsMake(100, 200, 200, 200)
+        scrollViewNew.contentInset = UIEdgeInsetsMake(100, 200, 200, 200)// (<#T##top: CGFloat##CGFloat#>, <#T##left: CGFloat##CGFloat#>, <#T##bottom: CGFloat##CGFloat#>, <#T##right: CGFloat##CGFloat#>)
+
        
         
         
@@ -53,7 +53,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         //scrollViewNew.clipsToBounds = true
         scrollViewNew.bounces = false
         view.addSubview(scrollViewNew)
-        
+        scrollViewNew.addSubview(imageView)
+
         
 //        let image = UIImage(named:"iphone-6.jpg")!
 //        scrollView.delegate = self
@@ -66,11 +67,11 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 //        scrollView.addSubview(imageView)
 //      //  scrollView.contentSize = image.size
 //        
-//        let doubleTap = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
-//        doubleTap.numberOfTapsRequired = 2
-//        doubleTap.numberOfTouchesRequired = 1
-//        scrollView.addGestureRecognizer(doubleTap)
-//        
+        let doubleTap = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
+        doubleTap.numberOfTapsRequired = 2
+        doubleTap.numberOfTouchesRequired = 1
+        scrollViewNew.addGestureRecognizer(doubleTap)
+//
 //        
 //        let scrollViewFrame = scrollView.frame
 //        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
@@ -87,24 +88,43 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 ////  
 //        self.automaticallyAdjustsScrollViewInsets = false
         //centerScrollViewContents()
-        addOverlay()
+        
+        transparentOverlay()
+       
+      
         
        
         
     }
-    
-    func addOverlay(){
+    func transparentOverlay(){
+        configureOverlay()
+        let path = UIBezierPath(roundedRect: CGRectMake(0, 0, view.bounds.width, view.bounds.height), cornerRadius: 0)
+      //  let rect = UIBezierPath(rect: )
+        let roundRect = UIBezierPath(roundedRect: CGRectMake(50, 50, overlay.bounds.width, overlay.bounds.height), cornerRadius: 20.0)
+        path.usesEvenOddFillRule = true
+        path.appendPath(roundRect)
+        
+        let fillLayer = CAShapeLayer()
+        fillLayer.path = path.CGPath
+        fillLayer.fillRule = kCAFillRuleEvenOdd
+        fillLayer.fillColor = UIColor.blackColor().CGColor
+        fillLayer.opacity = 0.5
+        view.layer.addSublayer(fillLayer)
+        
+        
+    }
+    func configureOverlay(){
         let offset: CGFloat = 40.0
         let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)
         overlay = UIView(frame: overlayFrame)
         overlay.backgroundColor = UIColor.redColor()
         overlay.alpha = 0.1
         overlay.userInteractionEnabled = false
-        view.addSubview(overlay)
+       // view.addSubview(overlay)
         
     }
     func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer){
-        
+       
 //        let pointInView = recognizer.locationInView(imageView)
 //        
 //        var newZoomScale = scrollView.zoomScale * 1.5

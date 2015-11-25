@@ -55,7 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 let cameraPicker = UIImagePickerController()
                 cameraPicker.delegate = self
-                cameraPicker.allowsEditing = true
+                cameraPicker.allowsEditing = false
                 cameraPicker.sourceType = .Camera
                 
                 
@@ -81,7 +81,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             let libraryPicker = UIImagePickerController()
             libraryPicker.delegate = self
-            libraryPicker.allowsEditing = true
+            libraryPicker.allowsEditing = false
             libraryPicker.sourceType = .PhotoLibrary
             
             self.presentViewController(libraryPicker, animated: true, completion: nil)

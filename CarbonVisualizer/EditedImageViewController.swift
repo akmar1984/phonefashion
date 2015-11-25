@@ -16,14 +16,16 @@ class EditedImageViewController: UIViewController, UIScrollViewDelegate {
         
         super.viewDidLoad()
         
-            let editedImageScrollView = UIScrollView.init(frame: view.bounds)
+        let editedImageScrollView = UIScrollView.init(frame: view.bounds)
         editedImageScrollView.backgroundColor = UIColor.redColor()
         view.addSubview(editedImageScrollView)
         editedImageScrollView.delegate = self
         
         if let editedImage = editedImage {
-
+       
         imageView.frame = CGRectMake(50, 50, editedImage.size.width, editedImage.size.height)
+        imageView.layer.cornerRadius = 20.0
+        imageView.clipsToBounds = true
         imageView.image = editedImage
         imageView.backgroundColor = UIColor.redColor()
         editedImageScrollView.addSubview(imageView)
