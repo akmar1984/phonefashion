@@ -2,17 +2,16 @@ import UIKit
 import SceneKit
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageViewControllerDelegate  {
     
     // UI
     @IBOutlet weak var geometryLabel: UILabel!
     @IBOutlet weak var sceneView: SCNView!
-    @IBOutlet weak var capturedImage: UIImage!
     @IBOutlet weak var backCube: SCNNode!
     @IBOutlet weak var homeButtonCube: SCNNode!
     @IBOutlet weak var frontScreen: SCNNode!
     var hasNewImage: Bool = false
-    
+    var capturedImage: UIImage!
     //geometry
     var geometryNode: SCNNode = SCNNode()
     
@@ -45,12 +44,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         sceneView.allowsCameraControl = true
         
     }
+    func imageViewControllerDidCancel(controller: ImageViewController, didFinishEditingImage editedImage: UIImage) {
+        capturedImage = editedImage
+        
+        
+        
+        let iphoneMaterial = SCNMaterial()
+        let material001 = SCNMaterial()
+        iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
+        material001.diffuse.contents = editedImage
+        geometryNode.geometry?.materials  = [iphoneMaterial, material001]
+        hasNewImage = true
+
+        dismissViewControllerAnimated(true, completion: nil)
+
+    }
     @IBAction func takePicture(sender: UIButton) {
         
         
         let actionSheet = UIAlertController(title: "Pick one of the options:", message: "", preferredStyle: .ActionSheet)
         let actionCamera = UIAlertAction(title: "Camera", style: .Default) { (action) -> Void in
-            
+             //CAMERA
             if UIImagePickerController .isSourceTypeAvailable(.Camera){
                 
                 let cameraPicker = UIImagePickerController()
@@ -76,9 +90,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let actionLibrary = UIAlertAction(title:"Library", style: .Default) { (
             action) -> Void in
             //PHOTO GALLERY
-            
-            
-            
             let libraryPicker = UIImagePickerController()
             libraryPicker.delegate = self
             libraryPicker.allowsEditing = false
@@ -118,12 +129,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //        }
         
         if let  pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            let iphoneMaterial = SCNMaterial()
-            let material001 = SCNMaterial()
-            iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
-            material001.diffuse.contents = pickedImage
+//            let iphoneMaterial = SCNMaterial()
+//            let material001 = SCNMaterial()
+//            iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
+//            material001.diffuse.contents = pickedImage
+           
             capturedImage = pickedImage
-            geometryNode.geometry?.materials  = [iphoneMaterial, material001]
+//            geometryNode.geometry?.materials  = [iphoneMaterial, material001]
             hasNewImage = true
             
             
@@ -132,7 +144,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         dismissViewControllerAnimated(true) { () -> Void in
         
-            //do it with the segue technique here in the completion handler
+            
             
           self.performSegueWithIdentifier("segue", sender: nil)
         }
@@ -141,7 +153,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue"{
             let imageViewController = segue.destinationViewController as! ImageViewController
-            imageViewController.newImage = capturedImage!
+            imageViewController.delegate = self
+            imageViewController.newImage = capturedImage
             
             
         }

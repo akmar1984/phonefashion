@@ -14,15 +14,19 @@ class ExampleViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(true)
-        createOverlay()
-        transparentOverlay()
+//        createOverlay()
+//        transparentOverlay()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let bezier = customBezierShape()
+        
+        view.addSubview(bezier)
         
         
     }
+    
     func createOverlay(){
         let offset: CGFloat = 40.0
         let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)

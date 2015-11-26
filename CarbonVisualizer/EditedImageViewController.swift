@@ -6,9 +6,13 @@
 //  Copyright © 2015 RayWenderlich. All rights reserved.
 //
 
+
 import UIKit
 
+
 class EditedImageViewController: UIViewController, UIScrollViewDelegate {
+    
+     
     var editedImage: UIImage?
     lazy var imageView: UIImageView = UIImageView()
     
@@ -32,8 +36,13 @@ class EditedImageViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
+
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         
         return imageView
     }
+    
+    
+    
+
 }

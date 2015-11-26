@@ -21,6 +21,7 @@
 		607FE81E1BF7D15C00F99DF7 /* iPhone 6.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */; };
 		609A0D8A1C00E8C2002A18D7 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */; };
 		60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA76F1C05B936009291D6 /* ExampleViewController.swift */; };
+		60ACA7721C05EEAA009291D6 /* customBezierShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA7711C05EEAA009291D6 /* customBezierShape.swift */; };
 		60DF176F1C03698B0044ADA6 /* UIView+ImageCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */; };
 		60DF17711C036DCF0044ADA6 /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */; };
 		80A0126D196A52E100BB3146 /* EthanolScene.dae in Resources */ = {isa = PBXBuildFile; fileRef = 80A0126C196A52E100BB3146 /* EthanolScene.dae */; };
@@ -57,6 +58,7 @@
 		607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6.dae"; sourceTree = "<group>"; };
 		609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		60ACA76F1C05B936009291D6 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		60ACA7711C05EEAA009291D6 /* customBezierShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customBezierShape.swift; sourceTree = "<group>"; };
 		60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ImageCapture.swift"; sourceTree = "<group>"; };
 		60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
 		80A0126C196A52E100BB3146 /* EthanolScene.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = EthanolScene.dae; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				80C4D615196B644B007BD44F /* Atoms.swift */,
 				80EE09C3196A4C4A00B77AB0 /* Main.storyboard */,
 				60ACA76F1C05B936009291D6 /* ExampleViewController.swift */,
+				60ACA7711C05EEAA009291D6 /* customBezierShape.swift */,
 				60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */,
 				600B48481BF4E57E00A18134 /* ImageViewController.swift */,
 				60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */,
@@ -307,6 +310,7 @@
 				80EE09DD196A4C8B00B77AB0 /* ViewController.swift in Sources */,
 				600B48491BF4E57E00A18134 /* ImageViewController.swift in Sources */,
 				80EE09C0196A4C4A00B77AB0 /* AppDelegate.swift in Sources */,
+				60ACA7721C05EEAA009291D6 /* customBezierShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
