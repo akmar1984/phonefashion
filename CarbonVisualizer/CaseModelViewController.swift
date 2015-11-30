@@ -2,7 +2,7 @@ import UIKit
 import SceneKit
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageViewControllerDelegate  {
+class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageViewControllerDelegate  {
     
     // UI
     @IBOutlet weak var geometryLabel: UILabel!
@@ -44,19 +44,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         sceneView.allowsCameraControl = true
         
     }
+    //DELEGATE PROTOCOL METHODS
     func imageViewControllerDidCancel(controller: ImageViewController, didFinishEditingImage editedImage: UIImage) {
         capturedImage = editedImage
         
-        
-        
         let iphoneMaterial = SCNMaterial()
         let material001 = SCNMaterial()
+        
         iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
         material001.diffuse.contents = editedImage
+
+       
+
         geometryNode.geometry?.materials  = [iphoneMaterial, material001]
+        
+        //REDO THE MAPPING FOR THE BACK CASE MAYBE SELECT THE BACK AND ADD SELECTED MATERIAL ONLY?
+        let caseNode = geometryNode.childNodeWithName("case", recursively: true)
+        caseNode!.geometry?.materials = [material001]
+        
         hasNewImage = true
 
         dismissViewControllerAnimated(true, completion: nil)
+        
 
     }
     @IBAction func takePicture(sender: UIButton) {
@@ -160,7 +169,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     func extractIphone6(){
-        let scene = SCNScene(named: "iPhone 6Exported")
+      //  let scene = SCNScene(named: "iPhone 6Exported")
+        let scene = SCNScene(named: "iPhone 6WithProperCaseVer3")
         let emptyScene = SCNScene()
         sceneView!.scene = emptyScene
         
@@ -171,15 +181,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             material001.diffuse.contents = UIImage(named: "Diffuse Screen.jpg")
             
+           // material001.diffuse.contentsTransform = SCNMatrix4MakeRotation(90, 0, 0, 0)
             //use the order of materials to adjust the different materials
             phone.geometry?.materials = [iphoneMaterial]
+            let caseNode = phone.childNodeWithName("case", recursively: true)
+            caseNode!.geometry?.materials = [material001]
             geometryNode = phone
             geometryNode.position = SCNVector3Make(0, 0, 0)
             
             geometryNode.eulerAngles = SCNVector3(x: GLKMathDegreesToRadians(-90), y: 0, z: 0)
             sceneView.scene!.rootNode.addChildNode(geometryNode)
+            
         }
         
+            
+            
+//            
+//            if let backCubeCase = scene!.rootNode.childNodeWithName("case", recursively: true){
+//                let caseMaterial = SCNMaterial()
+//                
+//                caseMaterial.diffuse.contents = UIImage(named: "04.jpg")
+//                backCubeCase.geometry?.materials = [caseMaterial]
+//                geometryNode = backCubeCase
+//                geometryNode.position = SCNVector3Make(0, 0, 0)
+//                
+//                //geometryNode.eulerAngles = SCNVector3(x: GLKMathDegreesToRadians(-90), y: 0, z: 0)
+//                sceneView.scene!.rootNode.addChildNode(geometryNode)
+//        }
+//        
+//        
         
     }
     func extractCubes(){
@@ -243,48 +273,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         
+        
     }
     
-    
-    
-    //    func sceneSetup(){
-    //
-    //        let scene = SCNScene()
-    //        //
-    //        //        let boxGeometry = SCNBox(width: 10.0, height: 10.0, length: 10.0, chamferRadius: 1.0)
-    //        //        let boxNode = SCNNode(geometry: boxGeometry)
-    //        //        scene.rootNode.addChildNode(boxNode)
-    //        //        geometryNode = boxNode
-    //
-    //
-    //        let panRecognizer = UIPanGestureRecognizer(target: self, action: "panGesture:")
-    //        sceneView.addGestureRecognizer(panRecognizer)
-    //
-    //        sceneView.scene = scene
-    //        // sceneView.autoenablesDefaultLighting = true
-    //        // sceneView.allowsCameraControl = true
-    //
-    //        let ambientLightNode = SCNNode()
-    //        ambientLightNode.light = SCNLight()
-    //        ambientLightNode.light!.type = SCNLightTypeAmbient
-    //        ambientLightNode.light!.color = UIColor(white: 0.64, alpha: 1.0)
-    //        scene.rootNode.addChildNode(ambientLightNode)
-    //
-    //        //        Although ambient light is part of the lighting equation, it’s not very useful on its own because it does little to illuminate surface details. So, add one more light to your scene with the following lines, just after your previous addition:
-    //
-    //        let omniLightNode = SCNNode()
-    //        omniLightNode.light = SCNLight()
-    //        omniLightNode.light!.type = SCNLightTypeOmni
-    //        omniLightNode.light!.color = UIColor(white: 0.75, alpha: 1.0)
-    //        omniLightNode.position = SCNVector3Make(0, 50, 50)
-    //        scene.rootNode.addChildNode(omniLightNode)
-    //
-    //        let cameraNode = SCNNode()
-    //        cameraNode.camera = SCNCamera()
-    //        cameraNode.position = SCNVector3Make(0, 0, 25)
-    //        scene.rootNode.addChildNode(cameraNode)
-    //
-    //    }
     
     func panGesture(sender: UIPanGestureRecognizer){
         

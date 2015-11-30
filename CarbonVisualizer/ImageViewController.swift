@@ -33,7 +33,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
    
     func done(sender: UIGestureRecognizer){
         
-        
+        let contextImage: UIImage =  captureImage()
+        imageView.image = contextImage
         delegate?.imageViewControllerDidCancel(self, didFinishEditingImage: imageView.image!)
         
     }
@@ -65,8 +66,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
         
         scrollViewNew.contentSize = CGSizeMake(image.size.width + 1000, image.size.height + 1000)
-        scrollViewNew.minimumZoomScale = 0.5
-        scrollViewNew.maximumZoomScale = 1.2
+        scrollViewNew.minimumZoomScale = 0.2
+        scrollViewNew.maximumZoomScale = 7.0
         //scrollViewNew.clipsToBounds = true
         scrollViewNew.bounces = false
         view.addSubview(scrollViewNew)

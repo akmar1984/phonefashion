@@ -20,9 +20,9 @@ class ExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bezier = customBezierShape()
+        //let bezier = customBezierShape()
         
-        view.addSubview(bezier)
+     //   view.addSubview(bezier)
         
         
     }

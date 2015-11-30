@@ -15,22 +15,21 @@
 		604579F51C04DB230072D05C /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604579F41C04DB230072D05C /* 04.jpg */; };
 		604E2D631BF23A45004054D5 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604E2D621BF23A45004054D5 /* dog.jpg */; };
 		604E2D671BF281E8004054D5 /* Diffuse Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604E2D661BF281E8004054D5 /* Diffuse Screen.jpg */; };
+		606F75921C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 606F75911C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae */; };
+		606F75941C0C6ABA00F3DFA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606F75931C0C6ABA00F3DFA4 /* MainViewController.swift */; };
 		607D01A61BEE79B400C4C52B /* Iphone 5c-1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607D01A51BEE79B400C4C52B /* Iphone 5c-1.dae */; };
 		607D01A81BEF614600C4C52B /* iphone-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 607D01A71BEF614600C4C52B /* iphone-6.jpg */; };
 		607FE81C1BF7D0E600F99DF7 /* iPhone 6Exported.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607FE81B1BF7D0E600F99DF7 /* iPhone 6Exported.dae */; };
 		607FE81E1BF7D15C00F99DF7 /* iPhone 6.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */; };
 		609A0D8A1C00E8C2002A18D7 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */; };
 		60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA76F1C05B936009291D6 /* ExampleViewController.swift */; };
-		60ACA7721C05EEAA009291D6 /* customBezierShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA7711C05EEAA009291D6 /* customBezierShape.swift */; };
 		60DF176F1C03698B0044ADA6 /* UIView+ImageCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */; };
 		60DF17711C036DCF0044ADA6 /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */; };
-		80A0126D196A52E100BB3146 /* EthanolScene.dae in Resources */ = {isa = PBXBuildFile; fileRef = 80A0126C196A52E100BB3146 /* EthanolScene.dae */; };
-		80C4D616196B644B007BD44F /* Atoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C4D615196B644B007BD44F /* Atoms.swift */; };
 		80EE09C0196A4C4A00B77AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */; };
 		80EE09C5196A4C4A00B77AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EE09C3196A4C4A00B77AB0 /* Main.storyboard */; };
 		80EE09C7196A4C4A00B77AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EE09C6196A4C4A00B77AB0 /* Images.xcassets */; };
 		80EE09D3196A4C4A00B77AB0 /* CarbonVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE09D2196A4C4A00B77AB0 /* CarbonVisualizerTests.swift */; };
-		80EE09DD196A4C8B00B77AB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE09DC196A4C8B00B77AB0 /* ViewController.swift */; };
+		80EE09DD196A4C8B00B77AB0 /* CaseModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE09DC196A4C8B00B77AB0 /* CaseModelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,17 +51,16 @@
 		604579F41C04DB230072D05C /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		604E2D621BF23A45004054D5 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		604E2D661BF281E8004054D5 /* Diffuse Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Diffuse Screen.jpg"; sourceTree = "<group>"; };
+		606F75911C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6WithProperCaseVer3.dae"; sourceTree = "<group>"; };
+		606F75931C0C6ABA00F3DFA4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		607D01A51BEE79B400C4C52B /* Iphone 5c-1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Iphone 5c-1.dae"; sourceTree = "<group>"; };
 		607D01A71BEF614600C4C52B /* iphone-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iphone-6.jpg"; sourceTree = "<group>"; };
 		607FE81B1BF7D0E600F99DF7 /* iPhone 6Exported.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6Exported.dae"; sourceTree = "<group>"; };
 		607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6.dae"; sourceTree = "<group>"; };
 		609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		60ACA76F1C05B936009291D6 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		60ACA7711C05EEAA009291D6 /* customBezierShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customBezierShape.swift; sourceTree = "<group>"; };
 		60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ImageCapture.swift"; sourceTree = "<group>"; };
 		60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
-		80A0126C196A52E100BB3146 /* EthanolScene.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = EthanolScene.dae; sourceTree = "<group>"; };
-		80C4D615196B644B007BD44F /* Atoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atoms.swift; sourceTree = "<group>"; };
 		80EE09BA196A4C4A00B77AB0 /* PhoneFashionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneFashionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EE09BE196A4C4A00B77AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +69,7 @@
 		80EE09CC196A4C4A00B77AB0 /* PhoneFashionApp.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneFashionApp.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EE09D1196A4C4A00B77AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EE09D2196A4C4A00B77AB0 /* CarbonVisualizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonVisualizerTests.swift; sourceTree = "<group>"; };
-		80EE09DC196A4C8B00B77AB0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80EE09DC196A4C8B00B77AB0 /* CaseModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseModelViewController.swift; sourceTree = "<group>"; };
 		9900D5DFF8B2B9CE99588217 /* Pods-CarbonVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonVisualizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarbonVisualizer/Pods-CarbonVisualizer.release.xcconfig"; sourceTree = "<group>"; };
 		B6BB4B1E4657CC217ADE0269 /* Pods-CarbonVisualizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonVisualizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarbonVisualizer/Pods-CarbonVisualizer.debug.xcconfig"; sourceTree = "<group>"; };
 		E01879E55F063AB972A7603B /* Pods_CarbonVisualizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonVisualizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +116,7 @@
 		80EE09BC196A4C4A00B77AB0 /* PhoneFashionApp */ = {
 			isa = PBXGroup;
 			children = (
+				606F75911C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae */,
 				607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */,
 				607FE81B1BF7D0E600F99DF7 /* iPhone 6Exported.dae */,
 				607D01A51BEE79B400C4C52B /* Iphone 5c-1.dae */,
@@ -130,17 +129,15 @@
 				607D01A71BEF614600C4C52B /* iphone-6.jpg */,
 				604E2D621BF23A45004054D5 /* dog.jpg */,
 				80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */,
-				80EE09DC196A4C8B00B77AB0 /* ViewController.swift */,
-				80C4D615196B644B007BD44F /* Atoms.swift */,
+				80EE09DC196A4C8B00B77AB0 /* CaseModelViewController.swift */,
 				80EE09C3196A4C4A00B77AB0 /* Main.storyboard */,
+				606F75931C0C6ABA00F3DFA4 /* MainViewController.swift */,
 				60ACA76F1C05B936009291D6 /* ExampleViewController.swift */,
-				60ACA7711C05EEAA009291D6 /* customBezierShape.swift */,
 				60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */,
 				600B48481BF4E57E00A18134 /* ImageViewController.swift */,
 				60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */,
 				609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */,
 				80EE09C6196A4C4A00B77AB0 /* Images.xcassets */,
-				80A0126C196A52E100BB3146 /* EthanolScene.dae */,
 				80EE09BD196A4C4A00B77AB0 /* Supporting Files */,
 			);
 			name = PhoneFashionApp;
@@ -271,10 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606F75921C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae in Resources */,
 				80EE09C5196A4C4A00B77AB0 /* Main.storyboard in Resources */,
 				604579F31C04BB760072D05C /* 1.jpg in Resources */,
 				600B48471BF4D93E00A18134 /* Iphone 5cEdited.dae in Resources */,
-				80A0126D196A52E100BB3146 /* EthanolScene.dae in Resources */,
 				604E2D631BF23A45004054D5 /* dog.jpg in Resources */,
 				600B48261BF3C4CC00A18134 /* iPhone 6Edited.dae in Resources */,
 				60231A8C1BF10E5C00A62258 /* iPhone6Positioned.dae in Resources */,
@@ -304,13 +301,12 @@
 			files = (
 				60DF17711C036DCF0044ADA6 /* EditedImageViewController.swift in Sources */,
 				60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */,
-				80C4D616196B644B007BD44F /* Atoms.swift in Sources */,
 				60DF176F1C03698B0044ADA6 /* UIView+ImageCapture.swift in Sources */,
 				609A0D8A1C00E8C2002A18D7 /* UIImage+Scaling.swift in Sources */,
-				80EE09DD196A4C8B00B77AB0 /* ViewController.swift in Sources */,
+				80EE09DD196A4C8B00B77AB0 /* CaseModelViewController.swift in Sources */,
 				600B48491BF4E57E00A18134 /* ImageViewController.swift in Sources */,
 				80EE09C0196A4C4A00B77AB0 /* AppDelegate.swift in Sources */,
-				60ACA7721C05EEAA009291D6 /* customBezierShape.swift in Sources */,
+				606F75941C0C6ABA00F3DFA4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
