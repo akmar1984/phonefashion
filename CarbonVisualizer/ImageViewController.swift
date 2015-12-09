@@ -118,7 +118,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
         let path = UIBezierPath(roundedRect: CGRectMake(0, 0, view.bounds.width, view.bounds.height), cornerRadius: 0)
         let roundRect = UIBezierPath(roundedRect: CGRectMake(50, 50, overlay.bounds.width, overlay.bounds.height), cornerRadius: 20.0)
-        let borderRect = UIBezierPath(rect: CGRectMake(40.0, 40.0, 400 , 400))
+     //   let borderRect = UIBezierPath(rect: CGRectMake(40.0, 40.0, 400 , 400))
 
        
         path.usesEvenOddFillRule = false

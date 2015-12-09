@@ -23,6 +23,20 @@
 		607FE81E1BF7D15C00F99DF7 /* iPhone 6.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */; };
 		609A0D8A1C00E8C2002A18D7 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */; };
 		60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA76F1C05B936009291D6 /* ExampleViewController.swift */; };
+		60C7B1161C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60C7B1151C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae */; };
+		60C7B1201C0CAE7400C5489A /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1181C0CAE7400C5489A /* libPayPalMobile.a */; };
+		60C7B12D1C0CAE8F00C5489A /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B12A1C0CAE8F00C5489A /* libCardIO.a */; };
+		60C7B12E1C0CAE8F00C5489A /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B12B1C0CAE8F00C5489A /* libopencv_core.a */; };
+		60C7B12F1C0CAE8F00C5489A /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B12C1C0CAE8F00C5489A /* libopencv_imgproc.a */; };
+		60C7B1311C0CB00C00C5489A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1301C0CB00C00C5489A /* Accelerate.framework */; };
+		60C7B1331C0CB01100C5489A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1321C0CB01100C5489A /* AudioToolbox.framework */; };
+		60C7B1351C0CB01700C5489A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1341C0CB01700C5489A /* AVFoundation.framework */; };
+		60C7B1371C0CB01E00C5489A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1361C0CB01E00C5489A /* CoreLocation.framework */; };
+		60C7B1391C0CB02500C5489A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1381C0CB02500C5489A /* CoreMedia.framework */; };
+		60C7B13B1C0CB02B00C5489A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B13A1C0CB02B00C5489A /* MessageUI.framework */; };
+		60C7B13D1C0CB03200C5489A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B13C1C0CB03200C5489A /* MobileCoreServices.framework */; };
+		60C7B13F1C0CB03B00C5489A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B13E1C0CB03B00C5489A /* SystemConfiguration.framework */; };
+		60C7B1411C0CB04200C5489A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1401C0CB04200C5489A /* SafariServices.framework */; };
 		60DF176F1C03698B0044ADA6 /* UIView+ImageCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */; };
 		60DF17711C036DCF0044ADA6 /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */; };
 		80EE09C0196A4C4A00B77AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */; };
@@ -59,8 +73,39 @@
 		607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6.dae"; sourceTree = "<group>"; };
 		609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		60ACA76F1C05B936009291D6 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		60C7B1151C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6WithProperCaseVer4.dae"; sourceTree = "<group>"; };
+		60C7B1181C0CAE7400C5489A /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		60C7B1191C0CAE7400C5489A /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
+		60C7B11A1C0CAE7400C5489A /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		60C7B11B1C0CAE7400C5489A /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		60C7B11C1C0CAE7400C5489A /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		60C7B11D1C0CAE7400C5489A /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		60C7B11E1C0CAE7400C5489A /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		60C7B11F1C0CAE7400C5489A /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		60C7B1221C0CAE8F00C5489A /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
+		60C7B1231C0CAE8F00C5489A /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		60C7B1241C0CAE8F00C5489A /* CardIODetectionMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIODetectionMode.h; sourceTree = "<group>"; };
+		60C7B1251C0CAE8F00C5489A /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		60C7B1261C0CAE8F00C5489A /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		60C7B1271C0CAE8F00C5489A /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOUtilities.h; sourceTree = "<group>"; };
+		60C7B1281C0CAE8F00C5489A /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
+		60C7B1291C0CAE8F00C5489A /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
+		60C7B12A1C0CAE8F00C5489A /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
+		60C7B12B1C0CAE8F00C5489A /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
+		60C7B12C1C0CAE8F00C5489A /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
+		60C7B1301C0CB00C00C5489A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		60C7B1321C0CB01100C5489A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		60C7B1341C0CB01700C5489A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		60C7B1361C0CB01E00C5489A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		60C7B1381C0CB02500C5489A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		60C7B13A1C0CB02B00C5489A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		60C7B13C1C0CB03200C5489A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		60C7B13E1C0CB03B00C5489A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		60C7B1401C0CB04200C5489A /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ImageCapture.swift"; sourceTree = "<group>"; };
 		60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
+		60EDEEFD1C0DBD8F008AA352 /* PhoneFashionApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneFashionApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		60EDEF001C0DBFDA008AA352 /* ZZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZAppDelegate.h; sourceTree = "<group>"; };
 		80EE09BA196A4C4A00B77AB0 /* PhoneFashionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneFashionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EE09BE196A4C4A00B77AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +115,7 @@
 		80EE09D1196A4C4A00B77AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EE09D2196A4C4A00B77AB0 /* CarbonVisualizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonVisualizerTests.swift; sourceTree = "<group>"; };
 		80EE09DC196A4C8B00B77AB0 /* CaseModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseModelViewController.swift; sourceTree = "<group>"; };
-		9900D5DFF8B2B9CE99588217 /* Pods-CarbonVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonVisualizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarbonVisualizer/Pods-CarbonVisualizer.release.xcconfig"; sourceTree = "<group>"; };
-		B6BB4B1E4657CC217ADE0269 /* Pods-CarbonVisualizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonVisualizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarbonVisualizer/Pods-CarbonVisualizer.debug.xcconfig"; sourceTree = "<group>"; };
+		D5FB0EFF78AA9C3B70B9F9BF /* libPods-PhoneFashionApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhoneFashionApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01879E55F063AB972A7603B /* Pods_CarbonVisualizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonVisualizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +124,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C7B1411C0CB04200C5489A /* SafariServices.framework in Frameworks */,
+				60C7B13F1C0CB03B00C5489A /* SystemConfiguration.framework in Frameworks */,
+				60C7B13D1C0CB03200C5489A /* MobileCoreServices.framework in Frameworks */,
+				60C7B13B1C0CB02B00C5489A /* MessageUI.framework in Frameworks */,
+				60C7B1391C0CB02500C5489A /* CoreMedia.framework in Frameworks */,
+				60C7B1371C0CB01E00C5489A /* CoreLocation.framework in Frameworks */,
+				60C7B1351C0CB01700C5489A /* AVFoundation.framework in Frameworks */,
+				60C7B1331C0CB01100C5489A /* AudioToolbox.framework in Frameworks */,
+				60C7B1311C0CB00C00C5489A /* Accelerate.framework in Frameworks */,
+				60C7B12F1C0CAE8F00C5489A /* libopencv_imgproc.a in Frameworks */,
+				60C7B1201C0CAE7400C5489A /* libPayPalMobile.a in Frameworks */,
+				60C7B12D1C0CAE8F00C5489A /* libCardIO.a in Frameworks */,
+				60C7B12E1C0CAE8F00C5489A /* libopencv_core.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,14 +150,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60C7B1171C0CAE7400C5489A /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				60C7B1181C0CAE7400C5489A /* libPayPalMobile.a */,
+				60C7B1191C0CAE7400C5489A /* PayPalConfiguration.h */,
+				60C7B11A1C0CAE7400C5489A /* PayPalFuturePaymentViewController.h */,
+				60C7B11B1C0CAE7400C5489A /* PayPalMobile.h */,
+				60C7B11C1C0CAE7400C5489A /* PayPalOAuthScopes.h */,
+				60C7B11D1C0CAE7400C5489A /* PayPalPayment.h */,
+				60C7B11E1C0CAE7400C5489A /* PayPalPaymentViewController.h */,
+				60C7B11F1C0CAE7400C5489A /* PayPalProfileSharingViewController.h */,
+			);
+			path = PayPalMobile;
+			sourceTree = "<group>";
+		};
+		60C7B1211C0CAE8F00C5489A /* CardIO */ = {
+			isa = PBXGroup;
+			children = (
+				60C7B1221C0CAE8F00C5489A /* CardIO.h */,
+				60C7B1231C0CAE8F00C5489A /* CardIOCreditCardInfo.h */,
+				60C7B1241C0CAE8F00C5489A /* CardIODetectionMode.h */,
+				60C7B1251C0CAE8F00C5489A /* CardIOPaymentViewController.h */,
+				60C7B1261C0CAE8F00C5489A /* CardIOPaymentViewControllerDelegate.h */,
+				60C7B1271C0CAE8F00C5489A /* CardIOUtilities.h */,
+				60C7B1281C0CAE8F00C5489A /* CardIOView.h */,
+				60C7B1291C0CAE8F00C5489A /* CardIOViewDelegate.h */,
+				60C7B12A1C0CAE8F00C5489A /* libCardIO.a */,
+				60C7B12B1C0CAE8F00C5489A /* libopencv_core.a */,
+				60C7B12C1C0CAE8F00C5489A /* libopencv_imgproc.a */,
+			);
+			name = CardIO;
+			path = PayPalMobile/CardIO;
+			sourceTree = "<group>";
+		};
 		80EE09B1196A4C4A00B77AB0 = {
 			isa = PBXGroup;
 			children = (
 				80EE09BC196A4C4A00B77AB0 /* PhoneFashionApp */,
 				80EE09CF196A4C4A00B77AB0 /* PhoneFashionAppTests */,
 				80EE09BB196A4C4A00B77AB0 /* Products */,
-				8D424255E90393B4D5C1238F /* Pods */,
 				EB6C6F1B5736A8DBB558D8CD /* Frameworks */,
+				60EDEEFD1C0DBD8F008AA352 /* PhoneFashionApp-Bridging-Header.h */,
+				60EDEF001C0DBFDA008AA352 /* ZZAppDelegate.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +208,10 @@
 		80EE09BC196A4C4A00B77AB0 /* PhoneFashionApp */ = {
 			isa = PBXGroup;
 			children = (
+				60C7B1211C0CAE8F00C5489A /* CardIO */,
+				60C7B1171C0CAE7400C5489A /* PayPalMobile */,
 				606F75911C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae */,
+				60C7B1151C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae */,
 				607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */,
 				607FE81B1BF7D0E600F99DF7 /* iPhone 6Exported.dae */,
 				607D01A51BEE79B400C4C52B /* Iphone 5c-1.dae */,
@@ -170,19 +265,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8D424255E90393B4D5C1238F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B6BB4B1E4657CC217ADE0269 /* Pods-CarbonVisualizer.debug.xcconfig */,
-				9900D5DFF8B2B9CE99588217 /* Pods-CarbonVisualizer.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		EB6C6F1B5736A8DBB558D8CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60C7B1401C0CB04200C5489A /* SafariServices.framework */,
+				60C7B13E1C0CB03B00C5489A /* SystemConfiguration.framework */,
+				60C7B13C1C0CB03200C5489A /* MobileCoreServices.framework */,
+				60C7B13A1C0CB02B00C5489A /* MessageUI.framework */,
+				60C7B1381C0CB02500C5489A /* CoreMedia.framework */,
+				60C7B1361C0CB01E00C5489A /* CoreLocation.framework */,
+				60C7B1341C0CB01700C5489A /* AVFoundation.framework */,
+				60C7B1321C0CB01100C5489A /* AudioToolbox.framework */,
+				60C7B1301C0CB00C00C5489A /* Accelerate.framework */,
 				E01879E55F063AB972A7603B /* Pods_CarbonVisualizer.framework */,
+				D5FB0EFF78AA9C3B70B9F9BF /* libPods-PhoneFashionApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,6 +375,7 @@
 				607FE81C1BF7D0E600F99DF7 /* iPhone 6Exported.dae in Resources */,
 				607D01A81BEF614600C4C52B /* iphone-6.jpg in Resources */,
 				607FE81E1BF7D15C00F99DF7 /* iPhone 6.dae in Resources */,
+				60C7B1161C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae in Resources */,
 				604579F51C04DB230072D05C /* 04.jpg in Resources */,
 				80EE09C7196A4C4A00B77AB0 /* Images.xcassets in Resources */,
 				604E2D671BF281E8004054D5 /* Diffuse Screen.jpg in Resources */,
@@ -425,11 +522,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CarbonVisualizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarbonVisualizer/PayPalMobile",
+					"$(PROJECT_DIR)/CarbonVisualizer/PayPalMobile/CardIO",
+				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhoneFashionApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneFashionApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -438,11 +547,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CarbonVisualizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarbonVisualizer/PayPalMobile",
+					"$(PROJECT_DIR)/CarbonVisualizer/PayPalMobile/CardIO",
+				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhoneFashionApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneFashionApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

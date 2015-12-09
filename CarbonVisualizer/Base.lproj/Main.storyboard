@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="77" id="IPF-5x-IQ0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxv-Yz-grK">
@@ -75,12 +75,20 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.15000000599999999" green="0.15000000599999999" blue="0.15000000599999999" alpha="1" colorSpace="deviceRGB"/>
                             </sceneKitView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwB-2F-41p">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwB-2F-41p">
                                 <rect key="frame" x="20" y="543" width="97" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Take a Picture"/>
                                 <connections>
                                     <action selector="takePicture:" destination="kQC-t8-k2Y" eventType="touchUpInside" id="aA1-5n-QAf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8W-gm-Ujl">
+                                <rect key="frame" x="271" y="550" width="40" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Order"/>
+                                <connections>
+                                    <action selector="order:" destination="kQC-t8-k2Y" eventType="touchUpInside" id="qHH-Z6-1Wu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,6 +100,10 @@
                             <constraint firstItem="770-eV-Tev" firstAttribute="top" secondItem="6AR-9S-R7o" secondAttribute="bottom" constant="56" id="IXr-ab-xsN"/>
                             <constraint firstItem="ipJ-sd-2Tw" firstAttribute="top" secondItem="hYx-gu-9hy" secondAttribute="bottom" constant="10" id="K9W-1T-Wes"/>
                             <constraint firstItem="ipJ-sd-2Tw" firstAttribute="leading" secondItem="CvP-vF-jX7" secondAttribute="leading" constant="20" symbolic="YES" id="R3M-4W-4tX"/>
+                            <constraint firstItem="770-eV-Tev" firstAttribute="top" secondItem="RwB-2F-41p" secondAttribute="bottom" constant="27" id="UvI-2X-cNO"/>
+                            <constraint firstItem="Q8W-gm-Ujl" firstAttribute="centerX" secondItem="CvP-vF-jX7" secondAttribute="centerX" id="YaI-eY-qf3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RwB-2F-41p" secondAttribute="leading" id="fzy-yf-tqT"/>
+                            <constraint firstItem="Q8W-gm-Ujl" firstAttribute="centerY" secondItem="CvP-vF-jX7" secondAttribute="centerY" id="iUY-sS-Jkm"/>
                             <constraint firstAttribute="centerX" secondItem="6AR-9S-R7o" secondAttribute="centerX" id="jD4-LS-02o"/>
                             <constraint firstAttribute="trailing" secondItem="ipJ-sd-2Tw" secondAttribute="trailing" constant="20" symbolic="YES" id="kNc-xn-k7s"/>
                         </constraints>

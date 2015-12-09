@@ -2,7 +2,7 @@ import UIKit
 import SceneKit
 
 
-class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageViewControllerDelegate  {
+class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageViewControllerDelegate, PayPalPaymentDelegate  {
     
     // UI
     @IBOutlet weak var geometryLabel: UILabel!
@@ -10,28 +10,33 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var backCube: SCNNode!
     @IBOutlet weak var homeButtonCube: SCNNode!
     @IBOutlet weak var frontScreen: SCNNode!
+
     var hasNewImage: Bool = false
     var capturedImage: UIImage!
-    //geometry
     var geometryNode: SCNNode = SCNNode()
-    
-    //gestures
     var currentAngle: Float = 0.0
     
+    //PAYPAL!
+    var payPalConfiguration: PayPalConfiguration!
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(animated: Bool) {
-        
+        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentNoNetwork)
         if !hasNewImage{
             //extractCubes()
             extractIphone6()
+            
         }
     }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        payPalConfiguration = PayPalConfiguration()
+        payPalConfiguration.acceptCreditCards = true
+        payPalConfiguration.payPalShippingAddressOption = .PayPal
         
         
         
@@ -44,7 +49,77 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
         sceneView.allowsCameraControl = true
         
     }
-    //DELEGATE PROTOCOL METHODS
+    
+    @IBAction func order(sender: UIButton) {
+        
+       
+
+        let payment = PayPalPayment(amount: 5.00, currencyCode: "GBP", shortDescription: "iPhone5Case", intent: .Sale)
+        let shippingAddress = PayPalShippingAddress(recipientName: "Name", withLine1: "line1", withLine2: "", withCity: "City", withState: "State", withPostalCode: "postalCode", withCountryCode: "UK")
+        
+        payment.shippingAddress = shippingAddress
+        
+        if payment.processable {
+            // If, for example, the amount was negative or the shortDescription was empty, then
+            // this payment would not be processable. You would want to handle that here.
+            
+            
+            let paymentViewController =
+            
+            PayPalPaymentViewController(payment: payment,
+                configuration: payPalConfiguration,
+                delegate: self)
+            
+            presentViewController(paymentViewController, animated: true, completion: nil)
+        }else{
+            print("Payment not processable\(payment)")
+
+        }
+       
+    }
+    
+   //MARK: PayPal
+    func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
+        
+      dismissViewControllerAnimated(true, completion: nil)
+        
+        
+    }
+    
+    func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
+        
+    
+        dismissViewControllerAnimated(true, completion: nil)
+
+    }
+    
+    
+    func verifyCompletedPayment(completedPayment: PayPalPayment){
+           // Send the entire confirmation dictionary
+//        do {
+//            let object = try NSJSONSerialization.dataWithJSONObject(completedPayment.confirmation, options: nil) as! [NSObject : AnyObject]
+//            print(object)
+//        } catch let error as NSError{
+//            
+//            print("json error: \(error.localizedDescription)")
+//        }
+        
+            // Send confirmation to your server; your server should verify the proof of payment
+        //    // and give the user their goods or services. If the server is not reachable, save
+        //    // the confirmation and try again later.
+    }
+//    - (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
+//    // Send the entire confirmation dictionary
+//    NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation
+//    options:0
+//    error:nil];
+//    
+//    // Send confirmation to your server; your server should verify the proof of payment
+//    // and give the user their goods or services. If the server is not reachable, save
+//    // the confirmation and try again later.
+//    }
+    
+    //MARK: DELEGATE PROTOCOL METHODS
     func imageViewControllerDidCancel(controller: ImageViewController, didFinishEditingImage editedImage: UIImage) {
         capturedImage = editedImage
         
@@ -68,6 +143,7 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
         
 
     }
+    //MARK: IMAGE PICKER
     @IBAction func takePicture(sender: UIButton) {
         
         
@@ -123,19 +199,6 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        //this works for assigning image for an image
-        //        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
-        //            capturedImage.contentMode = .ScaleAspectFill
-        //            capturedImage.image = pickedImage
-        //            let iphoneNewMaterial = SCNMaterial()
-        //            iphoneNewMaterial.diffuse.contents = pickedImage
-        //            backCube.geometry?.materials = [iphoneNewMaterial]
-        //
-        //            hasNewImage = true
-        //
-        //
-        //
-        //        }
         
         if let  pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
 //            let iphoneMaterial = SCNMaterial()
@@ -170,7 +233,7 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
     }
     func extractIphone6(){
       //  let scene = SCNScene(named: "iPhone 6Exported")
-        let scene = SCNScene(named: "iPhone 6WithProperCaseVer3")
+        let scene = SCNScene(named: "iPhone 6WithProperCaseVer4")
         let emptyScene = SCNScene()
         sceneView!.scene = emptyScene
         
@@ -195,23 +258,9 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
             
-            
-//            
-//            if let backCubeCase = scene!.rootNode.childNodeWithName("case", recursively: true){
-//                let caseMaterial = SCNMaterial()
-//                
-//                caseMaterial.diffuse.contents = UIImage(named: "04.jpg")
-//                backCubeCase.geometry?.materials = [caseMaterial]
-//                geometryNode = backCubeCase
-//                geometryNode.position = SCNVector3Make(0, 0, 0)
-//                
-//                //geometryNode.eulerAngles = SCNVector3(x: GLKMathDegreesToRadians(-90), y: 0, z: 0)
-//                sceneView.scene!.rootNode.addChildNode(geometryNode)
-//        }
-//        
-//        
         
     }
+    //MARK: 3D ENVIRONMENT
     func extractCubes(){
         let scene = SCNScene(named: "Iphone 5cEdited")
         let emptyScene = SCNScene()
