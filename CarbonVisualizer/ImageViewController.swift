@@ -20,6 +20,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     var delegate: ImageViewControllerDelegate?
     var newImage: UIImage?
+    var imageViewWithIphoneEdges: UIImageView!
     var imageView: UIImageView!
     var overlay: UIView!
     var someView: UIView!
@@ -31,12 +32,20 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
     }
    
+    
     func done(sender: UIGestureRecognizer){
         
-        let contextImage: UIImage =  captureImage()
-        imageView.image = contextImage
-        delegate?.imageViewControllerDidCancel(self, didFinishEditingImage: imageView.image!)
+//        let contextImage: UIImage =  captureImage()
+//        imageView.image = contextImage
+//        delegate?.imageViewControllerDidCancel(self, didFinishEditingImage: imageView.image!)
         
+
+        self.performSegueWithIdentifier("segueCase", sender: nil)
+        
+    }
+    func previewButton(sender: UIButton){
+        self.performSegueWithIdentifier("editedImageTwo", sender: nil)
+   
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +61,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
             imageView.frame = CGRect(origin: CGPointZero, size: image.size)
         }
         
-
-        
-       // imageView = UIImageView(image: newImage)
-       // imageView.frame = CGRect(origin: CGPointZero, size: newImage.size)
-        //imageView.frame = CGRect(origin: CGPointZero, size: image.size)
+       
+       
         scrollViewNew = UIScrollView(frame: CGRectMake(0, 0, view.bounds.width, view.bounds.height))
         scrollViewNew.backgroundColor = UIColor.blueColor()
         scrollViewNew.delegate = self
@@ -65,13 +71,21 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
        
         
         
-        scrollViewNew.contentSize = CGSizeMake(image.size.width + 1000, image.size.height + 1000)
+        scrollViewNew.contentSize = CGSizeMake(imageView.image!.size.width + 1000, imageView.image!.size.height + 1000)
         scrollViewNew.minimumZoomScale = 0.2
-        scrollViewNew.maximumZoomScale = 7.0
-        //scrollViewNew.clipsToBounds = true
-        scrollViewNew.bounces = false
+        scrollViewNew.maximumZoomScale = 6.0
+      
+        ///scrollViewNew.clipsToBounds = true
+       // scrollViewNew.bounces = false
         view.addSubview(scrollViewNew)
         scrollViewNew.addSubview(imageView)
+
+        let previewButton = UIButton(type: .Custom)
+        previewButton.frame = CGRectMake(0, 10, 70, 60)
+        previewButton.setTitle("Preview", forState: UIControlState.Normal)
+        previewButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        previewButton.addTarget(self, action: "previewButton:", forControlEvents: .TouchUpInside)
+        view.addSubview(previewButton)
 
         
         
@@ -109,21 +123,32 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
        
         
     }
+    
     func transparentOverlay(){
         let offset: CGFloat = 40.0
-        let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)
-         overlay = UIView(frame: overlayFrame)
+        
+         //overlay image width should be width:  80mm x 134mm=  226points x 379points, (154mm x 88mm = 436p x 249p)
+
+        let overlayFrame = CGRectMake(0, 0, 249, 436)
+      //  let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)
+        overlay = UIView(frame: overlayFrame)
 //        overlay.alpha = 0.1
 //        overlay.userInteractionEnabled = false
         
-        let path = UIBezierPath(roundedRect: CGRectMake(0, 0, view.bounds.width, view.bounds.height), cornerRadius: 0)
-        let roundRect = UIBezierPath(roundedRect: CGRectMake(50, 50, overlay.bounds.width, overlay.bounds.height), cornerRadius: 20.0)
-     //   let borderRect = UIBezierPath(rect: CGRectMake(40.0, 40.0, 400 , 400))
+    
+        
+        //WORK ON PUTTING THE FRAME INSIDE THE FRAME SHOWING THE EDGES OF THE IPHONE
+        print("view width:\(view.frame.size.width), h:\(view.frame.size.height)")
 
-       
+        print("overlay width:\(overlay.frame.size.width), h:\(overlay.frame.size.height)")
+        let path = UIBezierPath(roundedRect: CGRectMake(0, 0, view.bounds.width, view.bounds.height), cornerRadius: 0)
+        let roundRect = UIBezierPath(roundedRect: CGRectMake(70, 70, overlay.bounds.width, overlay.bounds.height), cornerRadius: 20.0)
+
+        let normalRect = UIBezierPath(rect: CGRectMake(50, 50, overlay.bounds.width, overlay.bounds.height))
         path.usesEvenOddFillRule = false
-        path.appendPath(roundRect)
-     
+
+        path.appendPath(normalRect) //path.appendPath(roundRect)
+        
        
     
         let fillLayer = CAShapeLayer()
@@ -133,19 +158,24 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         fillLayer.opacity = 0.5
         view.layer.addSublayer(fillLayer)
         
-//        
-//        let borderFill = CAShapeLayer()
-//        borderFill.path = borderRect.CGPath
-////        borderFill.fillRule = kCAFillRuleEvenOdd
-//        borderFill.fillColor = UIColor.redColor().CGColor
-//        borderFill.opacity = 0.0
-//        view.layer.addSublayer(borderFill)
-//        
         
-        
+        drawIphoneEdges()
         
     }
+    func drawIphoneEdges() {
+        
+        let image = UIImage(named: "iphone6templateEdited.png")
+        
+        
+        
+        imageViewWithIphoneEdges = UIImageView(frame: CGRectMake(0, 0, 0, 0))
+        imageViewWithIphoneEdges.image = image
+        imageViewWithIphoneEdges.frame = CGRectMake(50, 50, overlay.frame.width, overlay.frame.height)
+        imageViewWithIphoneEdges.contentMode = .ScaleToFill
+        
+        view.addSubview(imageViewWithIphoneEdges)
 
+    }
     func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer){
        
 //        let pointInView = recognizer.locationInView(imageView)
@@ -166,20 +196,21 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         let contextImage: UIImage =  captureImage()
         imageView.image = contextImage
         //scrollViewNew.contentSize = contextImage.size
-         self.performSegueWithIdentifier("editedImage", sender: nil)
+         self.performSegueWithIdentifier("editedImageTwo", sender: nil)
         
     }
     
     
     func captureImage()-> UIImage {
         //overlay.hidden = true
+        imageViewWithIphoneEdges.hidden = true
         UIGraphicsBeginImageContextWithOptions(overlay.bounds.size, true, 0.0) //or UIScreen.mainScreen().scalefor scale ?
         view.drawViewHierarchyInRect(CGRectMake(-50, -50, view.bounds.size.width, view.bounds.size.height), afterScreenUpdates: true)
         var newImage = UIImage()
         newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext();
         //overlay.hidden = false
-        
+        imageViewWithIphoneEdges.hidden = false
         return newImage
         
         
@@ -192,22 +223,36 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
                  editedImageViewController.editedImage = imageView.image!
                // editedImageViewController.view.addSubview(someView)
             
+
+        }
+        if segue.identifier == "editedImageTwo"{
+            let editedImageViewController = segue.destinationViewController as! EditedImageViewController
+            editedImageViewController.editedImage = captureImage()
+
             
             
         }
         
+        if segue.identifier == "segueCase"{
+//            let navigationController = segue.destinationViewController as! UINavigationController
+//            let controller = navigationController.topViewController as ItemDetailViewController
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! CaseModelViewController
+            controller.capturedImage = captureImage()
+        
+        }
     }
-    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) {
-        scrollView.contentSize = CGSizeMake(imageView.image!.size.width + 2000, imageView.image!.size.height + 1000)
-        scrollViewNew.contentInset = UIEdgeInsetsMake(100, 200, 200, 200)
-        
-        
-        
-    }
-    func scrollViewDidZoom(scrollView: UIScrollView) {
-        centerScrollViewContents()
-        
-    }
+//    func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) {
+//        scrollViewNew.contentSize = CGSizeMake(imageView.image!.size.width + 2000, imageView.image!.size.height + 1000)
+//        scrollViewNew.contentInset = UIEdgeInsetsMake(100, 200, 200, 200)
+//        
+//        
+//        
+//    }
+//    func scrollViewDidZoom(scrollView: UIScrollView) {
+//        centerScrollViewContents()
+//        
+//    }
     
     func centerScrollViewContents(){
         //centers the image in the center
@@ -239,23 +284,11 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 //
 //    }
         func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        
+       
         return imageView
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }

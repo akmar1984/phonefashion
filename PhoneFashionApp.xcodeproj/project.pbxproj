@@ -10,6 +10,7 @@
 		600B48261BF3C4CC00A18134 /* iPhone 6Edited.dae in Resources */ = {isa = PBXBuildFile; fileRef = 600B48251BF3C4CC00A18134 /* iPhone 6Edited.dae */; };
 		600B48471BF4D93E00A18134 /* Iphone 5cEdited.dae in Resources */ = {isa = PBXBuildFile; fileRef = 600B48461BF4D93E00A18134 /* Iphone 5cEdited.dae */; };
 		600B48491BF4E57E00A18134 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B48481BF4E57E00A18134 /* ImageViewController.swift */; };
+		6010EF3F1C384DA9009C64F6 /* iphone6templateEdited.png in Resources */ = {isa = PBXBuildFile; fileRef = 6010EF3E1C384DA9009C64F6 /* iphone6templateEdited.png */; };
 		60231A8C1BF10E5C00A62258 /* iPhone6Positioned.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60231A8B1BF10E5C00A62258 /* iPhone6Positioned.dae */; };
 		604579F31C04BB760072D05C /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604579F21C04BB760072D05C /* 1.jpg */; };
 		604579F51C04DB230072D05C /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604579F41C04DB230072D05C /* 04.jpg */; };
@@ -22,7 +23,12 @@
 		607FE81C1BF7D0E600F99DF7 /* iPhone 6Exported.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607FE81B1BF7D0E600F99DF7 /* iPhone 6Exported.dae */; };
 		607FE81E1BF7D15C00F99DF7 /* iPhone 6.dae in Resources */ = {isa = PBXBuildFile; fileRef = 607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */; };
 		609A0D8A1C00E8C2002A18D7 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */; };
+		60ABA2E81C1C669700630B83 /* Scaled_down_UV_240_4882.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60ABA2E71C1C669700630B83 /* Scaled_down_UV_240_4882.dae */; };
+		60ABA2EC1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60ABA2EB1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg */; };
 		60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA76F1C05B936009291D6 /* ExampleViewController.swift */; };
+		60B295951C19BC5700DD5809 /* iPhone 6wCase Andrzej.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60B295941C19BC5700DD5809 /* iPhone 6wCase Andrzej.dae */; };
+		60B295971C19BC6C00DD5809 /* iPhone 6wCase Andrzej.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60B295961C19BC6C00DD5809 /* iPhone 6wCase Andrzej.dae */; };
+		60B295991C19F0E600DD5809 /* Scaled_down_UV.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60B295981C19F0E600DD5809 /* Scaled_down_UV.dae */; };
 		60C7B1161C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60C7B1151C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae */; };
 		60C7B1201C0CAE7400C5489A /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1181C0CAE7400C5489A /* libPayPalMobile.a */; };
 		60C7B12D1C0CAE8F00C5489A /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B12A1C0CAE8F00C5489A /* libCardIO.a */; };
@@ -37,8 +43,11 @@
 		60C7B13D1C0CB03200C5489A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B13C1C0CB03200C5489A /* MobileCoreServices.framework */; };
 		60C7B13F1C0CB03B00C5489A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B13E1C0CB03B00C5489A /* SystemConfiguration.framework */; };
 		60C7B1411C0CB04200C5489A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1401C0CB04200C5489A /* SafariServices.framework */; };
+		60CB0C8B1C1D708A00A833C2 /* iPhone_6_test2-2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60CB0C8A1C1D708A00A833C2 /* iPhone_6_test2-2.dae */; };
+		60CB0CAD1C1DBFB000A833C2 /* iPhone_6_test3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60CB0CAC1C1DBFB000A833C2 /* iPhone_6_test3.dae */; };
 		60DF176F1C03698B0044ADA6 /* UIView+ImageCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */; };
 		60DF17711C036DCF0044ADA6 /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */; };
+		60EF78201C1CA91F00D2AC0C /* iPhone_6_test.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60EF781F1C1CA91F00D2AC0C /* iPhone_6_test.dae */; };
 		80EE09C0196A4C4A00B77AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */; };
 		80EE09C5196A4C4A00B77AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EE09C3196A4C4A00B77AB0 /* Main.storyboard */; };
 		80EE09C7196A4C4A00B77AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EE09C6196A4C4A00B77AB0 /* Images.xcassets */; };
@@ -60,6 +69,7 @@
 		600B48251BF3C4CC00A18134 /* iPhone 6Edited.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6Edited.dae"; sourceTree = "<group>"; };
 		600B48461BF4D93E00A18134 /* Iphone 5cEdited.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Iphone 5cEdited.dae"; sourceTree = "<group>"; };
 		600B48481BF4E57E00A18134 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		6010EF3E1C384DA9009C64F6 /* iphone6templateEdited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6templateEdited.png; sourceTree = "<group>"; };
 		60231A8B1BF10E5C00A62258 /* iPhone6Positioned.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = iPhone6Positioned.dae; sourceTree = "<group>"; };
 		604579F21C04BB760072D05C /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		604579F41C04DB230072D05C /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
@@ -72,7 +82,12 @@
 		607FE81B1BF7D0E600F99DF7 /* iPhone 6Exported.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6Exported.dae"; sourceTree = "<group>"; };
 		607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6.dae"; sourceTree = "<group>"; };
 		609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
+		60ABA2E71C1C669700630B83 /* Scaled_down_UV_240_4882.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Scaled_down_UV_240_4882.dae; sourceTree = "<group>"; };
+		60ABA2EB1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Diffuse Screen 134x80mm.jpg"; sourceTree = "<group>"; };
 		60ACA76F1C05B936009291D6 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		60B295941C19BC5700DD5809 /* iPhone 6wCase Andrzej.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6wCase Andrzej.dae"; sourceTree = "<group>"; };
+		60B295961C19BC6C00DD5809 /* iPhone 6wCase Andrzej.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6wCase Andrzej.dae"; sourceTree = "<group>"; };
+		60B295981C19F0E600DD5809 /* Scaled_down_UV.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Scaled_down_UV.dae; sourceTree = "<group>"; };
 		60C7B1151C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6WithProperCaseVer4.dae"; sourceTree = "<group>"; };
 		60C7B1181C0CAE7400C5489A /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
 		60C7B1191C0CAE7400C5489A /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
@@ -102,10 +117,13 @@
 		60C7B13C1C0CB03200C5489A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		60C7B13E1C0CB03B00C5489A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60C7B1401C0CB04200C5489A /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		60CB0C8A1C1D708A00A833C2 /* iPhone_6_test2-2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone_6_test2-2.dae"; sourceTree = "<group>"; };
+		60CB0CAC1C1DBFB000A833C2 /* iPhone_6_test3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = iPhone_6_test3.dae; sourceTree = "<group>"; };
 		60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ImageCapture.swift"; sourceTree = "<group>"; };
 		60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
 		60EDEEFD1C0DBD8F008AA352 /* PhoneFashionApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneFashionApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		60EDEF001C0DBFDA008AA352 /* ZZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZAppDelegate.h; sourceTree = "<group>"; };
+		60EF781F1C1CA91F00D2AC0C /* iPhone_6_test.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = iPhone_6_test.dae; sourceTree = "<group>"; };
 		80EE09BA196A4C4A00B77AB0 /* PhoneFashionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneFashionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EE09BE196A4C4A00B77AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +171,8 @@
 		60C7B1171C0CAE7400C5489A /* PayPalMobile */ = {
 			isa = PBXGroup;
 			children = (
+				6010EF3E1C384DA9009C64F6 /* iphone6templateEdited.png */,
+				60B295941C19BC5700DD5809 /* iPhone 6wCase Andrzej.dae */,
 				60C7B1181C0CAE7400C5489A /* libPayPalMobile.a */,
 				60C7B1191C0CAE7400C5489A /* PayPalConfiguration.h */,
 				60C7B11A1C0CAE7400C5489A /* PayPalFuturePaymentViewController.h */,
@@ -212,6 +232,11 @@
 				60C7B1171C0CAE7400C5489A /* PayPalMobile */,
 				606F75911C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae */,
 				60C7B1151C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae */,
+				60B295961C19BC6C00DD5809 /* iPhone 6wCase Andrzej.dae */,
+				60ABA2E71C1C669700630B83 /* Scaled_down_UV_240_4882.dae */,
+				60EF781F1C1CA91F00D2AC0C /* iPhone_6_test.dae */,
+				60CB0C8A1C1D708A00A833C2 /* iPhone_6_test2-2.dae */,
+				60CB0CAC1C1DBFB000A833C2 /* iPhone_6_test3.dae */,
 				607FE81D1BF7D15C00F99DF7 /* iPhone 6.dae */,
 				607FE81B1BF7D0E600F99DF7 /* iPhone 6Exported.dae */,
 				607D01A51BEE79B400C4C52B /* Iphone 5c-1.dae */,
@@ -219,6 +244,8 @@
 				600B48251BF3C4CC00A18134 /* iPhone 6Edited.dae */,
 				604E2D661BF281E8004054D5 /* Diffuse Screen.jpg */,
 				60231A8B1BF10E5C00A62258 /* iPhone6Positioned.dae */,
+				60B295981C19F0E600DD5809 /* Scaled_down_UV.dae */,
+				60ABA2EB1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg */,
 				604579F21C04BB760072D05C /* 1.jpg */,
 				604579F41C04DB230072D05C /* 04.jpg */,
 				607D01A71BEF614600C4C52B /* iphone-6.jpg */,
@@ -367,17 +394,26 @@
 				606F75921C0C69C800F3DFA4 /* iPhone 6WithProperCaseVer3.dae in Resources */,
 				80EE09C5196A4C4A00B77AB0 /* Main.storyboard in Resources */,
 				604579F31C04BB760072D05C /* 1.jpg in Resources */,
+				60B295991C19F0E600DD5809 /* Scaled_down_UV.dae in Resources */,
 				600B48471BF4D93E00A18134 /* Iphone 5cEdited.dae in Resources */,
 				604E2D631BF23A45004054D5 /* dog.jpg in Resources */,
+				60CB0C8B1C1D708A00A833C2 /* iPhone_6_test2-2.dae in Resources */,
 				600B48261BF3C4CC00A18134 /* iPhone 6Edited.dae in Resources */,
+				6010EF3F1C384DA9009C64F6 /* iphone6templateEdited.png in Resources */,
 				60231A8C1BF10E5C00A62258 /* iPhone6Positioned.dae in Resources */,
 				607D01A61BEE79B400C4C52B /* Iphone 5c-1.dae in Resources */,
 				607FE81C1BF7D0E600F99DF7 /* iPhone 6Exported.dae in Resources */,
+				60CB0CAD1C1DBFB000A833C2 /* iPhone_6_test3.dae in Resources */,
 				607D01A81BEF614600C4C52B /* iphone-6.jpg in Resources */,
 				607FE81E1BF7D15C00F99DF7 /* iPhone 6.dae in Resources */,
+				60B295951C19BC5700DD5809 /* iPhone 6wCase Andrzej.dae in Resources */,
 				60C7B1161C0CADBE00C5489A /* iPhone 6WithProperCaseVer4.dae in Resources */,
 				604579F51C04DB230072D05C /* 04.jpg in Resources */,
+				60ABA2EC1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg in Resources */,
+				60B295971C19BC6C00DD5809 /* iPhone 6wCase Andrzej.dae in Resources */,
 				80EE09C7196A4C4A00B77AB0 /* Images.xcassets in Resources */,
+				60EF78201C1CA91F00D2AC0C /* iPhone_6_test.dae in Resources */,
+				60ABA2E81C1C669700630B83 /* Scaled_down_UV_240_4882.dae in Resources */,
 				604E2D671BF281E8004054D5 /* Diffuse Screen.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

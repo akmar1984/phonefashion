@@ -2,7 +2,7 @@ import UIKit
 import SceneKit
 
 
-class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageViewControllerDelegate, PayPalPaymentDelegate  {
+class CaseModelViewController: UIViewController, PayPalPaymentDelegate  {
     
     // UI
     @IBOutlet weak var geometryLabel: UILabel!
@@ -32,6 +32,10 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
+
+    @IBAction func cancelButton(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         payPalConfiguration = PayPalConfiguration()
@@ -119,121 +123,124 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
 //    // the confirmation and try again later.
 //    }
     
-    //MARK: DELEGATE PROTOCOL METHODS
-    func imageViewControllerDidCancel(controller: ImageViewController, didFinishEditingImage editedImage: UIImage) {
-        capturedImage = editedImage
-        
-        let iphoneMaterial = SCNMaterial()
-        let material001 = SCNMaterial()
-        
-        iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
-        material001.diffuse.contents = editedImage
-
-       
-
-        geometryNode.geometry?.materials  = [iphoneMaterial, material001]
-        
-        //REDO THE MAPPING FOR THE BACK CASE MAYBE SELECT THE BACK AND ADD SELECTED MATERIAL ONLY?
-        let caseNode = geometryNode.childNodeWithName("case", recursively: true)
-        caseNode!.geometry?.materials = [material001]
-        
-        hasNewImage = true
-
-        dismissViewControllerAnimated(true, completion: nil)
-        
-
-    }
-    //MARK: IMAGE PICKER
-    @IBAction func takePicture(sender: UIButton) {
-        
-        
-        let actionSheet = UIAlertController(title: "Pick one of the options:", message: "", preferredStyle: .ActionSheet)
-        let actionCamera = UIAlertAction(title: "Camera", style: .Default) { (action) -> Void in
-             //CAMERA
-            if UIImagePickerController .isSourceTypeAvailable(.Camera){
-                
-                let cameraPicker = UIImagePickerController()
-                cameraPicker.delegate = self
-                cameraPicker.allowsEditing = false
-                cameraPicker.sourceType = .Camera
-                
-                
-                
-                self.presentViewController(cameraPicker, animated: true, completion: nil)
-            }
-            else {
-                print("NO CAMERA PRESENTED")
-                let noCamera = UIAlertController(title: "Error", message: "Sorry No Camera Present", preferredStyle: .Alert)
-                let dismissAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
-                noCamera.addAction(dismissAction)
-                self.presentViewController(noCamera, animated: true, completion: nil)
-            }
-            //comment in if you want to use the photos built in or camera
-            
-        }
-        actionSheet.addAction(actionCamera)
-        let actionLibrary = UIAlertAction(title:"Library", style: .Default) { (
-            action) -> Void in
-            //PHOTO GALLERY
-            let libraryPicker = UIImagePickerController()
-            libraryPicker.delegate = self
-            libraryPicker.allowsEditing = false
-            libraryPicker.sourceType = .PhotoLibrary
-            
-            self.presentViewController(libraryPicker, animated: true, completion: nil)
-            
-            
-        }
-        actionSheet.addAction(actionLibrary)
-        
-        self.presentViewController(actionSheet, animated: true, completion: nil)
-        
-        
-        
-        
-        
-    }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        
-        if let  pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
-//            let iphoneMaterial = SCNMaterial()
-//            let material001 = SCNMaterial()
-//            iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
-//            material001.diffuse.contents = pickedImage
-           
-            capturedImage = pickedImage
-//            geometryNode.geometry?.materials  = [iphoneMaterial, material001]
-            hasNewImage = true
-            
-            
-            
-        }
-        
-        dismissViewControllerAnimated(true) { () -> Void in
-        
-            
-            
-          self.performSegueWithIdentifier("segue", sender: nil)
-        }
-    }
+    
+    //MARK: DELEGATE PROTOCOL METHODS
+//    func imageViewControllerDidCancel(controller: ImageViewController, didFinishEditingImage editedImage: UIImage) {
+//        capturedImage = editedImage
+//        
+//        let iphoneMaterial = SCNMaterial()
+//        let material001 = SCNMaterial()
+//        
+//        iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
+//        material001.diffuse.contents = editedImage
+//
+//       
+//
+//        geometryNode.geometry?.materials  = [iphoneMaterial, material001]
+//        
+//        //REDO THE MAPPING FOR THE BACK CASE MAYBE SELECT THE BACK AND ADD SELECTED MATERIAL ONLY?
+//        let caseNode = geometryNode.childNodeWithName("case", recursively: true)
+//        caseNode!.geometry?.materials = [material001]
+//        
+//        hasNewImage = true
+//
+//        dismissViewControllerAnimated(true, completion: nil)
+//        
+//
+//    }
+    //MARK: IMAGE PICKER
+//    @IBAction func takePicture(sender: UIButton) {
+//        
+//        
+//        let actionSheet = UIAlertController(title: "Pick one of the options:", message: "", preferredStyle: .ActionSheet)
+//        let actionCamera = UIAlertAction(title: "Camera", style: .Default) { (action) -> Void in
+//             //CAMERA
+//            if UIImagePickerController .isSourceTypeAvailable(.Camera){
+//                
+//                let cameraPicker = UIImagePickerController()
+//                cameraPicker.delegate = self
+//                cameraPicker.allowsEditing = false
+//                cameraPicker.sourceType = .Camera
+//                
+//                
+//                
+//                self.presentViewController(cameraPicker, animated: true, completion: nil)
+//            }
+//            else {
+//                print("NO CAMERA PRESENTED")
+//                let noCamera = UIAlertController(title: "Error", message: "Sorry No Camera Present", preferredStyle: .Alert)
+//                let dismissAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+//                noCamera.addAction(dismissAction)
+//                self.presentViewController(noCamera, animated: true, completion: nil)
+//            }
+//            //comment in if you want to use the photos built in or camera
+//            
+//        }
+//        actionSheet.addAction(actionCamera)
+//        let actionLibrary = UIAlertAction(title:"Library", style: .Default) { (
+//            action) -> Void in
+//            //PHOTO GALLERY
+//            let libraryPicker = UIImagePickerController()
+//            libraryPicker.delegate = self
+//            libraryPicker.allowsEditing = false
+//            libraryPicker.sourceType = .PhotoLibrary
+//            
+//            self.presentViewController(libraryPicker, animated: true, completion: nil)
+//            
+//            
+//        }
+//        actionSheet.addAction(actionLibrary)
+//        
+//        self.presentViewController(actionSheet, animated: true, completion: nil)
+//        
+//        
+//        
+//        
+//        
+//    }
+//    
+//    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//        
+//        
+//        if let  pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+////            let iphoneMaterial = SCNMaterial()
+////            let material001 = SCNMaterial()
+////            iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
+////            material001.diffuse.contents = pickedImage
+//           
+//            capturedImage = pickedImage
+////            geometryNode.geometry?.materials  = [iphoneMaterial, material001]
+//            hasNewImage = true
+//            
+//            
+//            
+//        }
+//        
+//        dismissViewControllerAnimated(true) { () -> Void in
+//        
+//            
+//            
+//          self.performSegueWithIdentifier("segue", sender: nil)
+//        }
+//    }
    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue"{
             let imageViewController = segue.destinationViewController as! ImageViewController
-            imageViewController.delegate = self
+          //  imageViewController.delegate = self
             imageViewController.newImage = capturedImage
             
             
         }
     }
     func extractIphone6(){
-      //  let scene = SCNScene(named: "iPhone 6Exported")
-        let scene = SCNScene(named: "iPhone 6WithProperCaseVer4")
+      //  let scene = SCNScene(named: "iPhone 6WithProperCaseVer4")
+       
+        let scene = SCNScene(named: "Scaled_down_UV_240_4882")
         let emptyScene = SCNScene()
         sceneView!.scene = emptyScene
         
@@ -242,17 +249,23 @@ class CaseModelViewController: UIViewController, UIImagePickerControllerDelegate
             let material001 = SCNMaterial()
             iphoneMaterial.diffuse.contents = UIImage(named: "iphone-6.jpg")
             
+            
+            /* UNCOMMENT TO GET DIFFUSE SCREEN and thest if the image is mapped properly
             material001.diffuse.contents = UIImage(named: "Diffuse Screen.jpg")
             
-           // material001.diffuse.contentsTransform = SCNMatrix4MakeRotation(90, 0, 0, 0)
-            //use the order of materials to adjust the different materials
+            */
+         
+
+            material001.diffuse.contents = capturedImage
+
+
             phone.geometry?.materials = [iphoneMaterial]
             let caseNode = phone.childNodeWithName("case", recursively: true)
             caseNode!.geometry?.materials = [material001]
             geometryNode = phone
             geometryNode.position = SCNVector3Make(0, 0, 0)
             
-            geometryNode.eulerAngles = SCNVector3(x: GLKMathDegreesToRadians(-90), y: 0, z: 0)
+            geometryNode.eulerAngles = SCNVector3(x: GLKMathDegreesToRadians(-90), y: GLKMathDegreesToRadians(-180), z: 0)
             sceneView.scene!.rootNode.addChildNode(geometryNode)
             
         }
