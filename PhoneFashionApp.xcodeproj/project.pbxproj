@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5EB96DDD9235F9DF3A1B3EE8 /* Pods_PhoneFashionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635086B623BE94105682126 /* Pods_PhoneFashionApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		60015EBE1C3D3B2C0095620B /* case_with_applied_modifiers.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60015EBD1C3D3B2C0095620B /* case_with_applied_modifiers.dae */; };
 		600B48261BF3C4CC00A18134 /* iPhone 6Edited.dae in Resources */ = {isa = PBXBuildFile; fileRef = 600B48251BF3C4CC00A18134 /* iPhone 6Edited.dae */; };
 		600B48491BF4E57E00A18134 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B48481BF4E57E00A18134 /* ImageViewController.swift */; };
+		600C74921C6B935600A35A7A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 600C74861C6B935600A35A7A /* AFHTTPSessionManager.m */; };
+		600C74931C6B935600A35A7A /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 600C74891C6B935600A35A7A /* AFNetworkReachabilityManager.m */; };
+		600C74941C6B935600A35A7A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 600C748B1C6B935600A35A7A /* AFSecurityPolicy.m */; };
+		600C74951C6B935600A35A7A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 600C748D1C6B935600A35A7A /* AFURLRequestSerialization.m */; };
+		600C74961C6B935600A35A7A /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 600C748F1C6B935600A35A7A /* AFURLResponseSerialization.m */; };
+		600C74971C6B935600A35A7A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 600C74911C6B935600A35A7A /* AFURLSessionManager.m */; };
 		6010EF3F1C384DA9009C64F6 /* iphone6templateEdited.png in Resources */ = {isa = PBXBuildFile; fileRef = 6010EF3E1C384DA9009C64F6 /* iphone6templateEdited.png */; };
 		602931591C465D860046E0DB /* case_with_applied_modifiers_V3-3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 602931581C465D860046E0DB /* case_with_applied_modifiers_V3-3.dae */; };
 		604579F31C04BB760072D05C /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604579F21C04BB760072D05C /* 1.jpg */; };
@@ -55,6 +60,7 @@
 		60EA6EBD1C6B6FAB005FC79E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60EA6EB71C6B6FAB005FC79E /* SVProgressHUD.bundle */; };
 		60EA6EBE1C6B6FAB005FC79E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EA6EB91C6B6FAB005FC79E /* SVProgressHUD.m */; };
 		60EA6EBF1C6B6FAB005FC79E /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EA6EBB1C6B6FAB005FC79E /* SVRadialGradientLayer.m */; };
+		60F77E781C6B75AB0089AA4A /* secondCase.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60F77E771C6B75AB0089AA4A /* secondCase.dae */; };
 		80EE09C0196A4C4A00B77AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */; };
 		80EE09C5196A4C4A00B77AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EE09C3196A4C4A00B77AB0 /* Main.storyboard */; };
 		80EE09C7196A4C4A00B77AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EE09C6196A4C4A00B77AB0 /* Images.xcassets */; };
@@ -74,9 +80,23 @@
 
 /* Begin PBXFileReference section */
 		0B8E884E099537AC73E7D035 /* Pods-PhoneFashionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneFashionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneFashionApp/Pods-PhoneFashionApp.release.xcconfig"; sourceTree = "<group>"; };
+		1FA76708A3F2CA9AE29B70E2 /* libPods-PhoneFashionApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhoneFashionApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60015EBD1C3D3B2C0095620B /* case_with_applied_modifiers.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = case_with_applied_modifiers.dae; sourceTree = "<group>"; };
 		600B48251BF3C4CC00A18134 /* iPhone 6Edited.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "iPhone 6Edited.dae"; sourceTree = "<group>"; };
 		600B48481BF4E57E00A18134 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		600C74851C6B935600A35A7A /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		600C74861C6B935600A35A7A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		600C74871C6B935600A35A7A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		600C74881C6B935600A35A7A /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		600C74891C6B935600A35A7A /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		600C748A1C6B935600A35A7A /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		600C748B1C6B935600A35A7A /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		600C748C1C6B935600A35A7A /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		600C748D1C6B935600A35A7A /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		600C748E1C6B935600A35A7A /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		600C748F1C6B935600A35A7A /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		600C74901C6B935600A35A7A /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		600C74911C6B935600A35A7A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		6010EF3E1C384DA9009C64F6 /* iphone6templateEdited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone6templateEdited.png; path = PayPalMobile/iphone6templateEdited.png; sourceTree = "<group>"; };
 		602931581C465D860046E0DB /* case_with_applied_modifiers_V3-3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "case_with_applied_modifiers_V3-3.dae"; sourceTree = "<group>"; };
 		604579F21C04BB760072D05C /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -143,6 +163,7 @@
 		60EA6EBB1C6B6FAB005FC79E /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		60EDEEFD1C0DBD8F008AA352 /* PhoneFashionApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneFashionApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		60EDEF001C0DBFDA008AA352 /* ZZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZAppDelegate.h; sourceTree = "<group>"; };
+		60F77E771C6B75AB0089AA4A /* secondCase.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = secondCase.dae; sourceTree = "<group>"; };
 		80EE09BA196A4C4A00B77AB0 /* PhoneFashionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneFashionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EE09BE196A4C4A00B77AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EE09BF196A4C4A00B77AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,7 +174,6 @@
 		80EE09D2196A4C4A00B77AB0 /* CarbonVisualizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonVisualizerTests.swift; sourceTree = "<group>"; };
 		80EE09DC196A4C8B00B77AB0 /* CaseModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseModelViewController.swift; sourceTree = "<group>"; };
 		B17FBD05D3F1217C9522B199 /* Pods-PhoneFashionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneFashionApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneFashionApp/Pods-PhoneFashionApp.debug.xcconfig"; sourceTree = "<group>"; };
-		D635086B623BE94105682126 /* Pods_PhoneFashionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneFashionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01879E55F063AB972A7603B /* Pods_CarbonVisualizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonVisualizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,7 +195,6 @@
 				60C7B1201C0CAE7400C5489A /* libPayPalMobile.a in Frameworks */,
 				60C7B12D1C0CAE8F00C5489A /* libCardIO.a in Frameworks */,
 				60C7B12E1C0CAE8F00C5489A /* libopencv_core.a in Frameworks */,
-				5EB96DDD9235F9DF3A1B3EE8 /* Pods_PhoneFashionApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +220,7 @@
 		60015EBB1C3D3A660095620B /* iPhoneModels */ = {
 			isa = PBXGroup;
 			children = (
+				60F77E771C6B75AB0089AA4A /* secondCase.dae */,
 				602931581C465D860046E0DB /* case_with_applied_modifiers_V3-3.dae */,
 				606422D21C42A1D900095AD6 /* case_with_applied_modifiers_V2-2.dae */,
 				606422CF1C40321300095AD6 /* case_with_applied_modifiers_V2.dae */,
@@ -216,6 +236,26 @@
 				604E2D621BF23A45004054D5 /* dog.jpg */,
 			);
 			name = iPhoneModels;
+			sourceTree = "<group>";
+		};
+		600C74841C6B935600A35A7A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				600C74851C6B935600A35A7A /* AFHTTPSessionManager.h */,
+				600C74861C6B935600A35A7A /* AFHTTPSessionManager.m */,
+				600C74871C6B935600A35A7A /* AFNetworking.h */,
+				600C74881C6B935600A35A7A /* AFNetworkReachabilityManager.h */,
+				600C74891C6B935600A35A7A /* AFNetworkReachabilityManager.m */,
+				600C748A1C6B935600A35A7A /* AFSecurityPolicy.h */,
+				600C748B1C6B935600A35A7A /* AFSecurityPolicy.m */,
+				600C748C1C6B935600A35A7A /* AFURLRequestSerialization.h */,
+				600C748D1C6B935600A35A7A /* AFURLRequestSerialization.m */,
+				600C748E1C6B935600A35A7A /* AFURLResponseSerialization.h */,
+				600C748F1C6B935600A35A7A /* AFURLResponseSerialization.m */,
+				600C74901C6B935600A35A7A /* AFURLSessionManager.h */,
+				600C74911C6B935600A35A7A /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		60BB271A1C57ACF4004B3534 /* TextFieldEffects */ = {
@@ -311,6 +351,7 @@
 		80EE09BC196A4C4A00B77AB0 /* PhoneFashionApp */ = {
 			isa = PBXGroup;
 			children = (
+				600C74841C6B935600A35A7A /* AFNetworking */,
 				60EA6EB31C6B6FAB005FC79E /* SVProgressHUD */,
 				60BB271A1C57ACF4004B3534 /* TextFieldEffects */,
 				60C7B1211C0CAE8F00C5489A /* CardIO */,
@@ -371,7 +412,7 @@
 				60C7B1321C0CB01100C5489A /* AudioToolbox.framework */,
 				60C7B1301C0CB00C00C5489A /* Accelerate.framework */,
 				E01879E55F063AB972A7603B /* Pods_CarbonVisualizer.framework */,
-				D635086B623BE94105682126 /* Pods_PhoneFashionApp.framework */,
+				1FA76708A3F2CA9AE29B70E2 /* libPods-PhoneFashionApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -383,12 +424,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80EE09D6196A4C4A00B77AB0 /* Build configuration list for PBXNativeTarget "PhoneFashionApp" */;
 			buildPhases = (
-				651B848EC213D234D136479C /* Check Pods Manifest.lock */,
 				80EE09B6196A4C4A00B77AB0 /* Sources */,
 				80EE09B7196A4C4A00B77AB0 /* Frameworks */,
 				80EE09B8196A4C4A00B77AB0 /* Resources */,
-				937A5DD6976FEF0A88614DDF /* Embed Pods Frameworks */,
-				F9FE100A23BA764F2E4778C1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,6 +512,7 @@
 				607D01A81BEF614600C4C52B /* iphone-6.jpg in Resources */,
 				604579F51C04DB230072D05C /* 04.jpg in Resources */,
 				60ABA2EC1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg in Resources */,
+				60F77E781C6B75AB0089AA4A /* secondCase.dae in Resources */,
 				80EE09C7196A4C4A00B77AB0 /* Images.xcassets in Resources */,
 				60ABA2E81C1C669700630B83 /* Scaled_down_UV_240_4882.dae in Resources */,
 				604E2D671BF281E8004054D5 /* Diffuse Screen.jpg in Resources */,
@@ -489,54 +528,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		651B848EC213D234D136479C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		937A5DD6976FEF0A88614DDF /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoneFashionApp/Pods-PhoneFashionApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9FE100A23BA764F2E4778C1 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoneFashionApp/Pods-PhoneFashionApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		80EE09B6196A4C4A00B77AB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -546,7 +537,9 @@
 				60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */,
 				60EA6EBC1C6B6FAB005FC79E /* SVIndefiniteAnimatedView.m in Sources */,
 				60BB272E1C57ACF4004B3534 /* MinoruTextField.swift in Sources */,
+				600C74941C6B935600A35A7A /* AFSecurityPolicy.m in Sources */,
 				60DF176F1C03698B0044ADA6 /* UIView+ImageCapture.swift in Sources */,
+				600C74921C6B935600A35A7A /* AFHTTPSessionManager.m in Sources */,
 				60BB272A1C57ACF4004B3534 /* IsaoTextField.swift in Sources */,
 				60BB272D1C57ACF4004B3534 /* MadokaTextField.swift in Sources */,
 				60EA6EBF1C6B6FAB005FC79E /* SVRadialGradientLayer.m in Sources */,
@@ -557,6 +550,10 @@
 				60BB27311C57ACF4004B3534 /* YoshikoTextField.swift in Sources */,
 				60BB27271C57ACF4004B3534 /* AkiraTextField.swift in Sources */,
 				80EE09C0196A4C4A00B77AB0 /* AppDelegate.swift in Sources */,
+				600C74951C6B935600A35A7A /* AFURLRequestSerialization.m in Sources */,
+				600C74971C6B935600A35A7A /* AFURLSessionManager.m in Sources */,
+				600C74961C6B935600A35A7A /* AFURLResponseSerialization.m in Sources */,
+				600C74931C6B935600A35A7A /* AFNetworkReachabilityManager.m in Sources */,
 				606F75941C0C6ABA00F3DFA4 /* MainViewController.swift in Sources */,
 				60BB27281C57ACF4004B3534 /* HoshiTextField.swift in Sources */,
 				60BB27301C57ACF4004B3534 /* YokoTextField.swift in Sources */,
@@ -678,7 +675,6 @@
 		};
 		80EE09D7196A4C4A00B77AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B17FBD05D3F1217C9522B199 /* Pods-PhoneFashionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -704,7 +700,6 @@
 		};
 		80EE09D8196A4C4A00B77AB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B8E884E099537AC73E7D035 /* Pods-PhoneFashionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

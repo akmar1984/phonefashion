@@ -1,8 +1,5 @@
 
-
-
 target 'PhoneFashionApp' do
-
 
 end
 

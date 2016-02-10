@@ -15,9 +15,12 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
     var capturedImage: UIImage!
     var geometryNode: SCNNode = SCNNode()
     var currentAngle: Float = 0.0
+    var totalAmount = NSDecimalNumber()
+
+
     
     //PAYPAL!
-    var payPalConfiguration: PayPalConfiguration!
+    var payPalConfiguration =  PayPalConfiguration()
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -40,11 +43,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         let imageBase64String = imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength) as String
         let doneString = imageBase64String.stringByReplacingOccurrencesOfString("+", withString: "%2B")
         
-        //create header
-        //
-    //    let requestHeaders = [
-    //        "Content-Type": "application/x-www-form-urlencoded"
-     //   ]
+        
         
         //new image items to upload
         //
@@ -109,11 +108,13 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         // create the request
         let request = NSMutableURLRequest(URL: NSURL(string:"https://orders.marvelpress.co.uk/orders/order/")!)
         request.HTTPMethod = "POST"
+        //creating header
         request.setValue("Basic \(base64Credentials)", forHTTPHeaderField: "Authorization")
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.HTTPBody = parametersString.dataUsingEncoding(NSUTF8StringEncoding)
         // fire off the request
         //
+       // let urlConnection =
         let urlConnection = NSURLConnection(request: request, delegate: self)
         
     }
@@ -137,11 +138,9 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        payPalConfiguration = PayPalConfiguration()
-        payPalConfiguration.acceptCreditCards = true
-        payPalConfiguration.payPalShippingAddressOption = .PayPal
         
         
+        configurePayPal()
         
         sceneView.autoenablesDefaultLighting = true
         let cameraNode = SCNNode()
@@ -152,12 +151,29 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         sceneView.allowsCameraControl = true
         
     }
-    
+    func configurePayPal(){
+        
+        // Set up payPalConfig
+        payPalConfiguration.acceptCreditCards = true
+        payPalConfiguration.payPalShippingAddressOption = .PayPal
+        payPalConfiguration.acceptCreditCards = false
+        payPalConfiguration.merchantName = "FashionPhoneTEST"
+        payPalConfiguration.merchantPrivacyPolicyURL = NSURL(string: "https://www.paypal.com/webapps/mpp/ua/privacy-full")
+        payPalConfiguration.merchantUserAgreementURL = NSURL(string: "https://www.paypal.com/webapps/mpp/ua/useragreement-full")
+        
+        payPalConfiguration.languageOrLocale = NSLocale.preferredLanguages()[0]
+        
+        payPalConfiguration.payPalShippingAddressOption = .PayPal;
+        
+        print("PayPal iOS SDK Version: \(PayPalMobile.libraryVersion())")
+        
+        
+    }
     @IBAction func order(sender: UIButton) {
         
         
-        
-        let payment = PayPalPayment(amount: 5.00, currencyCode: "GBP", shortDescription: "iPhone5Case", intent: .Sale)
+        totalAmount = 5.00
+        let payment = PayPalPayment(amount: totalAmount, currencyCode: "GBP", shortDescription: "iPhone5CasePrint", intent: .Sale)
         let shippingAddress = PayPalShippingAddress(recipientName: "Name", withLine1: "line1", withLine2: "", withCity: "City", withState: "State", withPostalCode: "postalCode", withCountryCode: "UK")
         
         payment.shippingAddress = shippingAddress
@@ -198,62 +214,35 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         
     }
     
-//    func sendPaymentConfirmationToServer(confirmation: NSDictionary) {
-//        let foundationDictionary = NSMutableDictionary(dictionary: confirmation)
-//        foundationDictionary["amount"] = total_ammount
-//        
-//        let strServerUrl = "http://52.31.103.182"
-//        
-//        let manager = AFHTTPSessionManager();
-//        manager.responseSerializer.acceptableContentTypes = NSSet(array: ["text/html", "text/json", "application/json"]) as? Set<String>
-//        
-//        SVProgressHUD.showWithStatus("Sending Payment Confirmation...")
-//        manager.POST(strServerUrl, parameters: foundationDictionary,
-//            progress: { (progress) -> Void in
-//                
-//            },
-//            success: { (sessionTask, response) -> Void in
-//                let dicResult = response as! NSDictionary
-//                
-//                
-//                if(dicResult["result"]?.boolValue == true) {
-//                    SVProgressHUD.showSuccessWithStatus(dicResult["message"] as! String)
-//                } else {
-//                    SVProgressHUD.showErrorWithStatus(dicResult["message"] as! String)
-//                }
-//                
-//            }) { (sessionTask, error) -> Void in
-//                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
-//        }
-//    }
-
-    func verifyCompletedPayment(completedPayment: PayPalPayment){
-        // Send the entire confirmation dictionary
+    func sendPaymentConfirmationToServer(confirmation: NSDictionary) {
+        let foundationDictionary = NSMutableDictionary(dictionary: confirmation)
+        foundationDictionary["amount"] = totalAmount
         
-        //handle the payments confirmation!!
-//                do {
-//                    let object = try NSJSONSerialization.dataWithJSONObject(completedPayment.confirmation, options: nil) as! [NSObject : AnyObject]
-//                    print(object)
-//                } catch let error as NSError{
-//        
-//                    print("json error: \(error.localizedDescription)")
-//                }
+        let strServerUrl = "http://52.31.103.182"
         
-        // Send confirmation to your server; your server should verify the proof of payment
-        //    // and give the user their goods or services. If the server is not reachable, save
-        //    // the confirmation and try again later.
+        let manager = AFHTTPSessionManager();
+        manager.responseSerializer.acceptableContentTypes = NSSet(array: ["text/html", "text/json", "application/json"]) as? Set<String>
+        
+        SVProgressHUD.showWithStatus("Sending Payment Confirmation...")
+        manager.POST(strServerUrl, parameters: foundationDictionary,
+            progress: { (progress) -> Void in
+                
+            },
+            success: { (sessionTask, response) -> Void in
+                let dicResult = response as! NSDictionary
+                
+                
+                if(dicResult["result"]?.boolValue == true) {
+                    SVProgressHUD.showSuccessWithStatus(dicResult["message"] as! String)
+                } else {
+                    SVProgressHUD.showErrorWithStatus(dicResult["message"] as! String)
+                }
+                
+            }) { (sessionTask, error) -> Void in
+                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
+        }
     }
-    //    - (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
-    //    // Send the entire confirmation dictionary
-    //    NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation
-    //    options:0
-    //    error:nil];
-    //
-    //    // Send confirmation to your server; your server should verify the proof of payment
-    //    // and give the user their goods or services. If the server is not reachable, save
-    //    // the confirmation and try again later.
-    //    }
-    
+
     
     
     
@@ -268,8 +257,8 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
     func extractIphone6(){
         
         
-        //let scene = SCNScene(named: "Scaled_down_UV_240_4882")
-        let scene = SCNScene(named: "case_with_applied_modifiers_V2-2")
+        let scene = SCNScene(named: "secondCase")
+        //let scene = SCNScene(named: "case_with_applied_modifiers_V2-2")
         let emptyScene = SCNScene()
         sceneView!.scene = emptyScene
         

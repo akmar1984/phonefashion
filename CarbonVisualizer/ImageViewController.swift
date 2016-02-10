@@ -125,7 +125,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func transparentOverlay(){
-        let offset: CGFloat = 40.0
+       // let offset: CGFloat = 40.0
         
          //overlay image width should be width:  80mm x 134mm=  226points x 379points, (154mm x 88mm = 436.32p x 249.12p)
 
@@ -141,7 +141,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 
         print("overlay width:\(overlay.frame.size.width), h:\(overlay.frame.size.height)")
         let path = UIBezierPath(roundedRect: CGRectMake(0, 0, view.bounds.width, view.bounds.height), cornerRadius: 0)
-        let roundRect = UIBezierPath(roundedRect: CGRectMake(70, 70, overlay.bounds.width, overlay.bounds.height), cornerRadius: 20.0)
+       // let roundRect = UIBezierPath(roundedRect: CGRectMake(70, 70, overlay.bounds.width, overlay.bounds.height), cornerRadius: 20.0)
 
         let normalRect = UIBezierPath(rect: CGRectMake(50, 50, overlay.bounds.width, overlay.bounds.height))
         path.usesEvenOddFillRule = false

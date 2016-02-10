@@ -66,7 +66,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3d Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-sd-2Tw">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Case Preview" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-sd-2Tw">
                                 <rect key="frame" x="20" y="30" width="560" height="46"/>
                                 <animations/>
                                 <constraints>
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbH-3s-U7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="78"/>
+            <point key="canvasLocation" x="978" y="122"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="6Xq-pQ-5H7">
@@ -434,46 +434,6 @@
             </objects>
             <point key="canvasLocation" x="3477" y="39"/>
         </scene>
-        <!--Shipping Details-->
-        <scene sceneID="JJe-Xq-tsQ">
-            <objects>
-                <viewController id="UaL-bv-lBW" customClass="ExampleViewController" customModule="PhoneFashionApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L2N-xO-QEh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Wcv-KC-0qy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Md9-rR-FBa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rev-pX-Xs9" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
-                                <rect key="frame" x="290" y="366" width="316" height="30"/>
-                                <animations/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.60930544137954712" green="0.95091933012008667" blue="0.049185231328010559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Shipping Details" id="Gjm-zT-960"/>
-                    <connections>
-                        <outlet property="firstNameTextField" destination="8Lj-Bl-e3D" id="jpt-up-Mqe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GVh-bk-aTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2802" y="168"/>
-        </scene>
         <!--3D Case Preview-->
         <scene sceneID="ga4-mt-dGQ">
             <objects>
@@ -486,7 +446,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3d Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-Kq-FWf">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3d Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-Kq-FWf">
                                 <rect key="frame" x="20" y="30" width="560" height="46"/>
                                 <animations/>
                                 <constraints>
@@ -496,8 +456,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" loops="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UR-kt-7AX">
-                                <rect key="frame" x="0.0" y="84" width="600" height="460"/>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" loops="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UR-kt-7AX">
+                                <rect key="frame" x="0.0" y="64" width="600" height="480"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.15000000599999999" green="0.15000000599999999" blue="0.15000000599999999" alpha="1" colorSpace="deviceRGB"/>
                             </sceneKitView>
@@ -523,13 +483,13 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="8UR-kt-7AX" secondAttribute="centerX" id="1bW-CM-Wrv"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xc9-KS-JkK" secondAttribute="leading" id="9Xw-uN-JPJ"/>
-                            <constraint firstItem="8UR-kt-7AX" firstAttribute="top" secondItem="iqM-Kq-FWf" secondAttribute="bottom" constant="8" symbolic="YES" id="Ae4-D1-BLG"/>
+                            <constraint firstItem="8UR-kt-7AX" firstAttribute="top" secondItem="iqM-Kq-FWf" secondAttribute="bottom" constant="-12" id="Ae4-D1-BLG"/>
                             <constraint firstItem="MOd-Ym-FL4" firstAttribute="top" secondItem="qmy-Rc-TaD" secondAttribute="bottom" constant="27" id="Jak-jv-mg3"/>
                             <constraint firstItem="MOd-Ym-FL4" firstAttribute="top" secondItem="8UR-kt-7AX" secondAttribute="bottom" constant="56" id="PXD-gl-F6j"/>
                             <constraint firstItem="MOd-Ym-FL4" firstAttribute="top" secondItem="xc9-KS-JkK" secondAttribute="bottom" constant="27" id="QZY-ke-xL1"/>
                             <constraint firstAttribute="trailing" secondItem="iqM-Kq-FWf" secondAttribute="trailing" constant="20" symbolic="YES" id="QmX-6O-CJm"/>
                             <constraint firstItem="8UR-kt-7AX" firstAttribute="leading" secondItem="wX7-Dt-gen" secondAttribute="leading" id="VF6-kf-Ld1"/>
-                            <constraint firstItem="iqM-Kq-FWf" firstAttribute="top" secondItem="fcD-vb-lZw" secondAttribute="bottom" constant="10" id="t2U-Vg-yrf"/>
+                            <constraint firstItem="iqM-Kq-FWf" firstAttribute="top" secondItem="fcD-vb-lZw" secondAttribute="bottom" constant="-34" id="t2U-Vg-yrf"/>
                             <constraint firstItem="iqM-Kq-FWf" firstAttribute="leading" secondItem="wX7-Dt-gen" secondAttribute="leading" constant="20" symbolic="YES" id="tDw-27-FG7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qmy-Rc-TaD" secondAttribute="trailing" id="xUQ-hK-VAp"/>
                         </constraints>
@@ -590,6 +550,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XtL-SI-9em"/>
+        <segue reference="US4-bv-5Ku"/>
     </inferredMetricsTieBreakers>
 </document>
