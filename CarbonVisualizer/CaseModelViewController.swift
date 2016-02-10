@@ -1,6 +1,6 @@
 import UIKit
 import SceneKit
-
+import QuartzCore
 
 class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     
@@ -24,7 +24,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         super.viewDidLoad()
     }
     override func viewWillAppear(animated: Bool) {
-        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentNoNetwork)
+        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentSandbox)
         if !hasNewImage{
             extractIphone6()
             
@@ -163,8 +163,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         payment.shippingAddress = shippingAddress
         
         if payment.processable {
-            // If, for example, the amount was negative or the shortDescription was empty, then
-            // this payment would not be processable. You would want to handle that here.
+            
             
             
             let paymentViewController =
@@ -175,12 +174,15 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
             
             presentViewController(paymentViewController, animated: true, completion: nil)
         }else{
+            
+            // If, for example, the amount was negative or the shortDescription was empty, then
+            // this payment would not be processable. You would want to handle that here.
             print("Payment not processable\(payment)")
             
         }
         
     }
-    
+       
     //MARK: PayPal
     func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
         
@@ -191,12 +193,40 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
     
     func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
         
-        
+        print("Payment processed succesfully:\(completedPayment.confirmation)")
         dismissViewControllerAnimated(true, completion: nil)
         
     }
     
-    
+//    func sendPaymentConfirmationToServer(confirmation: NSDictionary) {
+//        let foundationDictionary = NSMutableDictionary(dictionary: confirmation)
+//        foundationDictionary["amount"] = total_ammount
+//        
+//        let strServerUrl = "http://52.31.103.182"
+//        
+//        let manager = AFHTTPSessionManager();
+//        manager.responseSerializer.acceptableContentTypes = NSSet(array: ["text/html", "text/json", "application/json"]) as? Set<String>
+//        
+//        SVProgressHUD.showWithStatus("Sending Payment Confirmation...")
+//        manager.POST(strServerUrl, parameters: foundationDictionary,
+//            progress: { (progress) -> Void in
+//                
+//            },
+//            success: { (sessionTask, response) -> Void in
+//                let dicResult = response as! NSDictionary
+//                
+//                
+//                if(dicResult["result"]?.boolValue == true) {
+//                    SVProgressHUD.showSuccessWithStatus(dicResult["message"] as! String)
+//                } else {
+//                    SVProgressHUD.showErrorWithStatus(dicResult["message"] as! String)
+//                }
+//                
+//            }) { (sessionTask, error) -> Void in
+//                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
+//        }
+//    }
+
     func verifyCompletedPayment(completedPayment: PayPalPayment){
         // Send the entire confirmation dictionary
         
@@ -239,7 +269,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         
         
         //let scene = SCNScene(named: "Scaled_down_UV_240_4882")
-        let scene = SCNScene(named: "case_with_applied_modifiers_V3-3") //CHECK if the dimensions of the obramowania testowego sie zgadzaja
+        let scene = SCNScene(named: "case_with_applied_modifiers_V2-2")
         let emptyScene = SCNScene()
         sceneView!.scene = emptyScene
         

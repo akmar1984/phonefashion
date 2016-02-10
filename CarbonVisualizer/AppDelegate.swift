@@ -28,7 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
    
-        PayPalMobile.initializeWithClientIdsForEnvironments([ PayPalEnvironmentNoNetwork : "NoNetwork", PayPalEnvironmentSandbox : "Client Sandbox Id"])
+       // PayPalMobile.initializeWithClientIdsForEnvironments([ PayPalEnvironmentNoNetwork : "NoNetwork", PayPalEnvironmentSandbox : "Client Sandbox Id"])
+        PayPalMobile.initializeWithClientIdsForEnvironments([ PayPalEnvironmentProduction : "Your client id",
+            PayPalEnvironmentSandbox : "AXoyWlS7bt9aPdo6NK04cvSKVHJEQoiVNMhk3ifSOtAO01i0xQAu_yexa4a6-bzSXEwCcdSv_suV-laX"])
+        
         //PayPalEnvironmentSandbox : "AXoyWlS7bt9aPdo6NK04cvSKVHJEQoiVNMhk3ifSOtAO01i0xQAu_yexa4a6-bzSXEwCcdSv_suV-laX"]
         
     return true

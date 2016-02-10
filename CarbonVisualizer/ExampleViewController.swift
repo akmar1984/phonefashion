@@ -9,49 +9,31 @@
 import UIKit
 
 class ExampleViewController: UIViewController {
-    var overlay: UIView!
+    
+    @IBOutlet weak var firstNameTextField: KaedeTextField!
+    
+    @IBOutlet weak var lastNameTextField: KaedeTextField!
+    
+    @IBOutlet weak var addressLineOneTextField: KaedeTextField!
+    
+    @IBOutlet weak var addressLineTwoTextField: KaedeTextField!
+    
     
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(true)
-//        createOverlay()
-//        transparentOverlay()
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //let bezier = customBezierShape()
-        
-     //   view.addSubview(bezier)
+        //try using textfield inside the cell!
+
         
         
     }
     
-    func createOverlay(){
-        let offset: CGFloat = 40.0
-        let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)
-        overlay = UIView(frame: overlayFrame)
-        overlay.backgroundColor = UIColor.redColor()
-
-        overlay.userInteractionEnabled = false
-        // view.addSubview(overlay)
-    }
-    func transparentOverlay(){
+    
         
-        let path = UIBezierPath(roundedRect: CGRectMake(0, 0, view.bounds.width, view.bounds.height), cornerRadius: 0)
-        let rect = UIBezierPath(rect: CGRectMake(50, 50, overlay.bounds.width, overlay.bounds.height))
-        path.usesEvenOddFillRule = true
-        path.appendPath(rect)
-
-        let fillLayer = CAShapeLayer()
-        fillLayer.path = path.CGPath
-        fillLayer.fillRule = kCAFillRuleEvenOdd
-        fillLayer.fillColor = UIColor.blackColor().CGColor
-        fillLayer.opacity = 1.0
-        view.layer.addSublayer(fillLayer)
-        
-        
-        }
     
     
     // Do any additional setup after loading the view.

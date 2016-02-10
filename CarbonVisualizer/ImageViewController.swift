@@ -127,9 +127,9 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     func transparentOverlay(){
         let offset: CGFloat = 40.0
         
-         //overlay image width should be width:  80mm x 134mm=  226points x 379points, (154mm x 88mm = 436p x 249p)
+         //overlay image width should be width:  80mm x 134mm=  226points x 379points, (154mm x 88mm = 436.32p x 249.12p)
 
-        let overlayFrame = CGRectMake(0, 0, 249, 436)
+        let overlayFrame = CGRectMake(0, 0, 249.12, 436.32)
       //  let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)
         overlay = UIView(frame: overlayFrame)
 //        overlay.alpha = 0.1
@@ -137,7 +137,6 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
     
         
-        //WORK ON PUTTING THE FRAME INSIDE THE FRAME SHOWING THE EDGES OF THE IPHONE
         print("view width:\(view.frame.size.width), h:\(view.frame.size.height)")
 
         print("overlay width:\(overlay.frame.size.width), h:\(overlay.frame.size.height)")
@@ -171,7 +170,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         imageViewWithIphoneEdges = UIImageView(frame: CGRectMake(0, 0, 0, 0))
         imageViewWithIphoneEdges.image = image
         imageViewWithIphoneEdges.frame = CGRectMake(50, 50, overlay.frame.width, overlay.frame.height)
-        imageViewWithIphoneEdges.contentMode = .ScaleToFill
+//        imageViewWithIphoneEdges.contentMode = .ScaleToFill
         
         view.addSubview(imageViewWithIphoneEdges)
 
