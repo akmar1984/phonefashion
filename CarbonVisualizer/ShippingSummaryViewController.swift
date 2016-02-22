@@ -1,47 +1,38 @@
 //
-//  ExampleViewController.swift
+//  ShippingSummaryViewController.swift
 //  PhoneFashionApp
 //
-//  Created by Marek Tomaszewski on 25/11/2015.
+//  Created by Marek Tomaszewski on 22/02/2016.
 //
 //
 
 import UIKit
 
-class ExampleViewController: UIViewController {
-    
-    @IBOutlet weak var firstNameTextField: KaedeTextField!
-    
-    @IBOutlet weak var lastNameTextField: KaedeTextField!
-    
-    @IBOutlet weak var addressLineOneTextField: KaedeTextField!
-    
-    @IBOutlet weak var addressLineTwoTextField: KaedeTextField!
-    
-    
-    override func viewWillAppear(animated: Bool) {
-        
-        super.viewWillAppear(true)
+class ShippingSummaryViewController: UIViewController {
 
-    }
+    
+
+    var label: String!
+    @IBOutlet weak var countryLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //try using textfield inside the cell!
+        
+        countryLabel.text = label
 
         
-        
+
+        // Do any additional setup after loading the view.
     }
     
-    
-        
-    
-    
-    // Do any additional setup after loading the view.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancelBarButton(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

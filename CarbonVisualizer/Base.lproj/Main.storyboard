@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ybc-NP-Ytv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jsW-et-DJE">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxv-Yz-grK">
                                 <rect key="frame" x="252" y="285" width="96" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Get One Now!"/>
                                 <connections>
                                     <action selector="getOneNowButton:" destination="Ybc-NP-Ytv" eventType="touchUpInside" id="a9S-VZ-1ZQ"/>
@@ -28,7 +27,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Fashion App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne8-s4-tso">
                                 <rect key="frame" x="219" y="113" width="162" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="AHp-AK-u2S"/>
                                 </constraints>
@@ -37,7 +35,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nxv-Yz-grK" firstAttribute="centerY" secondItem="auL-oe-SEp" secondAttribute="centerY" id="6gO-gw-l2a"/>
@@ -68,7 +65,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Case Preview" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-sd-2Tw">
                                 <rect key="frame" x="20" y="30" width="560" height="46"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="7un-Tc-Iu6"/>
                                 </constraints>
@@ -78,12 +74,10 @@
                             </label>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" loops="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AR-9S-R7o">
                                 <rect key="frame" x="0.0" y="84" width="600" height="460"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.15000000599999999" green="0.15000000599999999" blue="0.15000000599999999" alpha="1" colorSpace="deviceRGB"/>
                             </sceneKitView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwB-2F-41p">
                                 <rect key="frame" x="20" y="543" width="97" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Take a Picture"/>
                                 <connections>
                                     <action selector="takePicture:" destination="kQC-t8-k2Y" eventType="touchUpInside" id="aA1-5n-QAf"/>
@@ -91,14 +85,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8W-gm-Ujl">
                                 <rect key="frame" x="540" y="543" width="40" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Order"/>
                                 <connections>
                                     <action selector="order:" destination="kQC-t8-k2Y" eventType="touchUpInside" id="qHH-Z6-1Wu"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6AR-9S-R7o" firstAttribute="leading" secondItem="CvP-vF-jX7" secondAttribute="leading" id="6XU-Yf-fNt"/>
@@ -135,7 +127,6 @@
                     <view key="view" contentMode="scaleToFill" id="JWO-mq-35L">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -157,7 +148,6 @@
                     <view key="view" contentMode="scaleToFill" id="jrx-Fp-FZD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -180,7 +170,6 @@
                     <view key="view" contentMode="scaleToFill" id="Yj3-yn-O85">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -191,234 +180,200 @@
         <!--Your Shipping Details-->
         <scene sceneID="ep5-cD-IO3">
             <objects>
-                <tableViewController id="3yI-Eh-H80" sceneMemberID="viewController">
+                <tableViewController id="3yI-Eh-H80" customClass="ShippingViewController" customModule="PhoneFashionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uHt-z4-u6F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection id="Fd5-xY-N8Y">
+                            <tableViewSection id="7d8-PO-Z4S">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="c6g-Xo-roO">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="53" id="zbN-Vb-xXs">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c6g-Xo-roO" id="6jS-fM-vXN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbN-Vb-xXs" id="dJe-82-jF3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="8Lj-Bl-e3D" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="Ijg-5A-uCP"/>
-                                                        <constraint firstAttribute="height" constant="30" id="LKs-vZ-Zo4"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-xu-ue7" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="7" width="584" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.60934716463088989" green="0.95092064142227173" blue="0.049208082258701324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.47358906269073486" green="0.96918374300003052" blue="0.85382670164108276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstItem="8Lj-Bl-e3D" firstAttribute="trailing" secondItem="6jS-fM-vXN" secondAttribute="trailingMargin" id="N3f-wh-zQ6"/>
-                                                <constraint firstItem="8Lj-Bl-e3D" firstAttribute="top" secondItem="6jS-fM-vXN" secondAttribute="topMargin" constant="-1" id="VcU-CC-MVH"/>
-                                                <constraint firstItem="8Lj-Bl-e3D" firstAttribute="leading" secondItem="6jS-fM-vXN" secondAttribute="leadingMargin" id="rcv-Px-TN6"/>
+                                                <constraint firstItem="Pr6-xu-ue7" firstAttribute="leading" secondItem="dJe-82-jF3" secondAttribute="leadingMargin" id="QfD-Em-0ky"/>
+                                                <constraint firstItem="Pr6-xu-ue7" firstAttribute="trailing" secondItem="dJe-82-jF3" secondAttribute="trailingMargin" id="mOQ-Lm-PcG"/>
+                                                <constraint firstItem="Pr6-xu-ue7" firstAttribute="top" secondItem="dJe-82-jF3" secondAttribute="topMargin" constant="-1" id="tWe-6d-R4p"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Uog-NE-b6P">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="53" id="9Pp-jL-Vna">
+                                        <rect key="frame" x="0.0" y="117" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uog-NE-b6P" id="57E-xn-YN9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Pp-jL-Vna" id="xR0-5G-Ydv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="mF0-Lc-9X7" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="lJi-bc-Pvz"/>
-                                                        <constraint firstAttribute="height" constant="30" id="ra1-Mh-LZO"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Second Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27c-Yu-AxO" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="7" width="584" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.60934716463088989" green="0.95092064142227173" blue="0.049208082258701324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.47358906269073486" green="0.96918374300003052" blue="0.85382670164108276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstItem="mF0-Lc-9X7" firstAttribute="trailing" secondItem="57E-xn-YN9" secondAttribute="trailingMargin" id="67h-z7-DYE"/>
-                                                <constraint firstItem="mF0-Lc-9X7" firstAttribute="leading" secondItem="57E-xn-YN9" secondAttribute="leadingMargin" id="Lx1-jj-qrF"/>
-                                                <constraint firstItem="mF0-Lc-9X7" firstAttribute="top" secondItem="57E-xn-YN9" secondAttribute="topMargin" constant="-1" id="f4z-8w-CoA"/>
+                                                <constraint firstItem="27c-Yu-AxO" firstAttribute="leading" secondItem="xR0-5G-Ydv" secondAttribute="leadingMargin" id="Boc-L0-ANt"/>
+                                                <constraint firstItem="27c-Yu-AxO" firstAttribute="trailing" secondItem="xR0-5G-Ydv" secondAttribute="trailingMargin" id="MKL-4p-BRz"/>
+                                                <constraint firstItem="27c-Yu-AxO" firstAttribute="top" secondItem="xR0-5G-Ydv" secondAttribute="topMargin" constant="-1" id="unV-zX-B30"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ric-xF-Ug2">
-                                        <rect key="frame" x="0.0" y="152" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="53" id="Y3n-gd-Loh">
+                                        <rect key="frame" x="0.0" y="170" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ric-xF-Ug2" id="w5c-8E-D6C">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y3n-gd-Loh" id="HPX-Ds-5eZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="8NC-II-Dkw" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="GOa-2r-Exk"/>
-                                                        <constraint firstAttribute="width" constant="584" id="GT0-Y2-FpV"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUA-YZ-nZb" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="7" width="584" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.60934716463088989" green="0.95092064142227173" blue="0.049208082258701324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.47358906269073486" green="0.96918374300003052" blue="0.85382670164108276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstItem="8NC-II-Dkw" firstAttribute="trailing" secondItem="w5c-8E-D6C" secondAttribute="trailingMargin" id="Ag3-Qk-IJb"/>
-                                                <constraint firstItem="8NC-II-Dkw" firstAttribute="top" secondItem="w5c-8E-D6C" secondAttribute="topMargin" constant="-1" id="MO7-Dy-k0J"/>
-                                                <constraint firstItem="8NC-II-Dkw" firstAttribute="leading" secondItem="w5c-8E-D6C" secondAttribute="leadingMargin" id="XoM-5B-JmG"/>
+                                                <constraint firstItem="eUA-YZ-nZb" firstAttribute="trailing" secondItem="HPX-Ds-5eZ" secondAttribute="trailingMargin" id="Bdn-fK-xwW"/>
+                                                <constraint firstItem="eUA-YZ-nZb" firstAttribute="leading" secondItem="HPX-Ds-5eZ" secondAttribute="leadingMargin" id="G01-PV-JZj"/>
+                                                <constraint firstItem="eUA-YZ-nZb" firstAttribute="top" secondItem="HPX-Ds-5eZ" secondAttribute="topMargin" constant="-1" id="euN-Eu-DaZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p0A-ck-BLi">
-                                        <rect key="frame" x="0.0" y="196" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="53" id="VnX-wg-lgy">
+                                        <rect key="frame" x="0.0" y="223" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p0A-ck-BLi" id="sBU-bD-AqI">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VnX-wg-lgy" id="Qfd-ze-TuV">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-1F-bCs" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="TC2-3g-0Fu"/>
-                                                        <constraint firstAttribute="height" constant="30" id="gPy-nC-lbj"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3t-AG-5fr" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="7" width="584" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.60934716463088989" green="0.95092064142227173" blue="0.049208082258701324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.47358906269073486" green="0.96918374300003052" blue="0.85382670164108276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstItem="zdP-1F-bCs" firstAttribute="top" secondItem="sBU-bD-AqI" secondAttribute="topMargin" constant="-1" id="Bcd-q0-g6I"/>
-                                                <constraint firstItem="zdP-1F-bCs" firstAttribute="leading" secondItem="sBU-bD-AqI" secondAttribute="leadingMargin" id="Zaa-kd-9h2"/>
-                                                <constraint firstItem="zdP-1F-bCs" firstAttribute="trailing" secondItem="sBU-bD-AqI" secondAttribute="trailingMargin" id="eNW-Ks-BaC"/>
+                                                <constraint firstItem="o3t-AG-5fr" firstAttribute="top" secondItem="Qfd-ze-TuV" secondAttribute="topMargin" constant="-1" id="BKG-ug-nyO"/>
+                                                <constraint firstItem="o3t-AG-5fr" firstAttribute="leading" secondItem="Qfd-ze-TuV" secondAttribute="leadingMargin" id="Dv5-6A-czr"/>
+                                                <constraint firstItem="o3t-AG-5fr" firstAttribute="trailing" secondItem="Qfd-ze-TuV" secondAttribute="trailingMargin" id="gBu-wx-XLw"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="svy-Rn-WH1">
-                                        <rect key="frame" x="0.0" y="240" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="53" id="xlD-TP-Sk9">
+                                        <rect key="frame" x="0.0" y="276" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="svy-Rn-WH1" id="4Xo-h8-rkn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xlD-TP-Sk9" id="55Y-U6-vJc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="uAU-ga-sb6" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="OTB-hq-vg7"/>
-                                                        <constraint firstAttribute="width" constant="584" id="piD-6e-1Ah"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OoY-r4-I2N" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.60934716463088989" green="0.95092064142227173" blue="0.049208082258701324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.47358906269073486" green="0.96918374300003052" blue="0.85382670164108276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstItem="uAU-ga-sb6" firstAttribute="top" secondItem="4Xo-h8-rkn" secondAttribute="topMargin" constant="-1" id="6N0-uz-rUL"/>
-                                                <constraint firstItem="uAU-ga-sb6" firstAttribute="leading" secondItem="4Xo-h8-rkn" secondAttribute="leadingMargin" id="g3q-Lk-cK8"/>
-                                                <constraint firstItem="uAU-ga-sb6" firstAttribute="trailing" secondItem="4Xo-h8-rkn" secondAttribute="trailingMargin" id="mTm-Xe-bBx"/>
+                                                <constraint firstItem="OoY-r4-I2N" firstAttribute="leading" secondItem="55Y-U6-vJc" secondAttribute="leadingMargin" id="31o-JQ-juL"/>
+                                                <constraint firstItem="OoY-r4-I2N" firstAttribute="trailing" secondItem="55Y-U6-vJc" secondAttribute="trailingMargin" id="Q48-ZM-bA6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OoY-r4-I2N" secondAttribute="bottom" constant="6" id="kKs-Kz-6Lc"/>
+                                                <constraint firstItem="OoY-r4-I2N" firstAttribute="top" secondItem="55Y-U6-vJc" secondAttribute="topMargin" id="wxV-QG-A1b"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ly9-rd-dJF">
-                                        <rect key="frame" x="0.0" y="284" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="53" id="VRY-zY-sEA">
+                                        <rect key="frame" x="0.0" y="329" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ly9-rd-dJF" id="oBc-8D-tSg">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VRY-zY-sEA" id="bWo-jv-FEo">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="64p-Fy-HXn" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="Mxe-H8-bmD"/>
-                                                        <constraint firstAttribute="height" constant="30" id="NIB-dO-CTe"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHU-Jy-9Nm" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="7" width="584" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.60934716463088989" green="0.95092064142227173" blue="0.049208082258701324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.47358906269073486" green="0.96918374300003052" blue="0.85382670164108276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstItem="64p-Fy-HXn" firstAttribute="leading" secondItem="oBc-8D-tSg" secondAttribute="leadingMargin" id="IT8-Fg-y13"/>
-                                                <constraint firstItem="64p-Fy-HXn" firstAttribute="trailing" secondItem="oBc-8D-tSg" secondAttribute="trailingMargin" id="mCc-sO-xh0"/>
-                                                <constraint firstItem="64p-Fy-HXn" firstAttribute="top" secondItem="oBc-8D-tSg" secondAttribute="topMargin" constant="-1" id="pbi-oS-obc"/>
+                                                <constraint firstItem="QHU-Jy-9Nm" firstAttribute="leading" secondItem="bWo-jv-FEo" secondAttribute="leadingMargin" id="Nhm-Ub-Z5S"/>
+                                                <constraint firstItem="QHU-Jy-9Nm" firstAttribute="trailing" secondItem="bWo-jv-FEo" secondAttribute="trailingMargin" id="OWj-q4-jfe"/>
+                                                <constraint firstItem="QHU-Jy-9Nm" firstAttribute="top" secondItem="bWo-jv-FEo" secondAttribute="topMargin" constant="-1" id="qXm-zI-P5J"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -428,11 +383,78 @@
                             <outlet property="delegate" destination="3yI-Eh-H80" id="l2l-Gb-Dy1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Shipping Details" id="gBl-VX-HW5"/>
+                    <navigationItem key="navigationItem" title="Your Shipping Details" id="gBl-VX-HW5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="NYI-y4-4ai">
+                            <connections>
+                                <action selector="cancelButtonBar:" destination="3yI-Eh-H80" id="73U-WI-p1n"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="done" systemItem="done" id="Hgn-O9-Djd">
+                            <connections>
+                                <segue destination="BqQ-wo-jtp" kind="presentation" identifier="shippingSegue" id="LDj-Yr-xF4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countryTextField" destination="OoY-r4-I2N" id="W9H-Mp-9Yw"/>
+                        <outlet property="doneBarButton" destination="Hgn-O9-Djd" id="g3I-u4-qvf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBY-HS-vYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="o13-OX-lfm" customClass="KaedeTextField" customModule="PhoneFashionApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </objects>
-            <point key="canvasLocation" x="3477" y="39"/>
+            <point key="canvasLocation" x="3540" y="10"/>
+        </scene>
+        <!--Please check your details-->
+        <scene sceneID="m7E-5r-8R6">
+            <objects>
+                <viewController id="wcy-hr-2sS" customClass="ShippingSummaryViewController" customModule="PhoneFashionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ELG-Jm-Khh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dub-au-tWC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JAU-pE-lvO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U2-YV-yq3">
+                                <rect key="frame" x="20" y="197" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyC-2g-PQc">
+                                <rect key="frame" x="236" y="402" width="139" height="30"/>
+                                <state key="normal" title="Proceed to Payment"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oky-M9-UxU">
+                                <rect key="frame" x="114" y="189" width="228" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Please check your details" id="Vvl-ob-ZT3">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="ERF-BM-P7e">
+                            <connections>
+                                <action selector="cancelBarButton:" destination="wcy-hr-2sS" id="zxj-QO-uWo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countryLabel" destination="oky-M9-UxU" id="EPi-t5-CPV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbT-qq-MEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5113" y="10"/>
         </scene>
         <!--3D Case Preview-->
         <scene sceneID="ga4-mt-dGQ">
@@ -448,7 +470,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3d Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-Kq-FWf">
                                 <rect key="frame" x="20" y="30" width="560" height="46"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="s6o-RY-lLb"/>
                                 </constraints>
@@ -458,12 +479,10 @@
                             </label>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" loops="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UR-kt-7AX">
                                 <rect key="frame" x="0.0" y="64" width="600" height="480"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.15000000599999999" green="0.15000000599999999" blue="0.15000000599999999" alpha="1" colorSpace="deviceRGB"/>
                             </sceneKitView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc9-KS-JkK">
                                 <rect key="frame" x="20" y="543" width="97" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Take a Picture"/>
                                 <connections>
                                     <action selector="takePicture:" destination="f2U-y8-njl" eventType="touchUpInside" id="CzZ-NE-U2j"/>
@@ -471,14 +490,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmy-Rc-TaD">
                                 <rect key="frame" x="540" y="543" width="40" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Order"/>
                                 <connections>
                                     <action selector="order:" destination="f2U-y8-njl" eventType="touchUpInside" id="o8F-KY-G5e"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="8UR-kt-7AX" secondAttribute="centerX" id="1bW-CM-Wrv"/>
@@ -518,7 +535,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1VE-2D-jrQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -537,7 +553,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pwu-ga-Hr5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -546,7 +561,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNc-yL-bE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3301" y="695"/>
+            <point key="canvasLocation" x="2789" y="2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mlE-Jt-nkt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BqQ-wo-jtp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GUi-og-QwD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wcy-hr-2sS" kind="relationship" relationship="rootViewController" id="Aci-ng-ucM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwF-6q-krj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4301" y="10"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

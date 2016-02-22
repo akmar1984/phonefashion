@@ -29,7 +29,7 @@
 		609A0D8A1C00E8C2002A18D7 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */; };
 		60ABA2E81C1C669700630B83 /* Scaled_down_UV_240_4882.dae in Resources */ = {isa = PBXBuildFile; fileRef = 60ABA2E71C1C669700630B83 /* Scaled_down_UV_240_4882.dae */; };
 		60ABA2EC1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60ABA2EB1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg */; };
-		60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA76F1C05B936009291D6 /* ExampleViewController.swift */; };
+		60ACA7701C05B936009291D6 /* ShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA76F1C05B936009291D6 /* ShippingViewController.swift */; };
 		60BB27271C57ACF4004B3534 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BB271B1C57ACF4004B3534 /* AkiraTextField.swift */; };
 		60BB27281C57ACF4004B3534 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BB271C1C57ACF4004B3534 /* HoshiTextField.swift */; };
 		60BB27291C57ACF4004B3534 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60BB271D1C57ACF4004B3534 /* Info.plist */; };
@@ -56,6 +56,7 @@
 		60C7B1411C0CB04200C5489A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C7B1401C0CB04200C5489A /* SafariServices.framework */; };
 		60DF176F1C03698B0044ADA6 /* UIView+ImageCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */; };
 		60DF17711C036DCF0044ADA6 /* EditedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */; };
+		60E408AD1C7B72B300437BD8 /* ShippingSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E408AC1C7B72B300437BD8 /* ShippingSummaryViewController.swift */; };
 		60EA6EBC1C6B6FAB005FC79E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EA6EB51C6B6FAB005FC79E /* SVIndefiniteAnimatedView.m */; };
 		60EA6EBD1C6B6FAB005FC79E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60EA6EB71C6B6FAB005FC79E /* SVProgressHUD.bundle */; };
 		60EA6EBE1C6B6FAB005FC79E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EA6EB91C6B6FAB005FC79E /* SVProgressHUD.m */; };
@@ -110,7 +111,7 @@
 		609A0D891C00E8C2002A18D7 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
 		60ABA2E71C1C669700630B83 /* Scaled_down_UV_240_4882.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Scaled_down_UV_240_4882.dae; sourceTree = "<group>"; };
 		60ABA2EB1C1C732A00630B83 /* Diffuse Screen 134x80mm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Diffuse Screen 134x80mm.jpg"; sourceTree = "<group>"; };
-		60ACA76F1C05B936009291D6 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		60ACA76F1C05B936009291D6 /* ShippingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingViewController.swift; sourceTree = "<group>"; };
 		60BB271B1C57ACF4004B3534 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
 		60BB271C1C57ACF4004B3534 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
 		60BB271D1C57ACF4004B3534 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		60C7B1401C0CB04200C5489A /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ImageCapture.swift"; sourceTree = "<group>"; };
 		60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditedImageViewController.swift; sourceTree = "<group>"; };
+		60E408AC1C7B72B300437BD8 /* ShippingSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingSummaryViewController.swift; sourceTree = "<group>"; };
 		60EA6EB41C6B6FAB005FC79E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		60EA6EB51C6B6FAB005FC79E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		60EA6EB61C6B6FAB005FC79E /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
@@ -361,7 +363,8 @@
 				80EE09DC196A4C8B00B77AB0 /* CaseModelViewController.swift */,
 				80EE09C3196A4C4A00B77AB0 /* Main.storyboard */,
 				606F75931C0C6ABA00F3DFA4 /* MainViewController.swift */,
-				60ACA76F1C05B936009291D6 /* ExampleViewController.swift */,
+				60ACA76F1C05B936009291D6 /* ShippingViewController.swift */,
+				60E408AC1C7B72B300437BD8 /* ShippingSummaryViewController.swift */,
 				60DF17701C036DCF0044ADA6 /* EditedImageViewController.swift */,
 				600B48481BF4E57E00A18134 /* ImageViewController.swift */,
 				60DF176E1C03698B0044ADA6 /* UIView+ImageCapture.swift */,
@@ -534,7 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DF17711C036DCF0044ADA6 /* EditedImageViewController.swift in Sources */,
-				60ACA7701C05B936009291D6 /* ExampleViewController.swift in Sources */,
+				60ACA7701C05B936009291D6 /* ShippingViewController.swift in Sources */,
 				60EA6EBC1C6B6FAB005FC79E /* SVIndefiniteAnimatedView.m in Sources */,
 				60BB272E1C57ACF4004B3534 /* MinoruTextField.swift in Sources */,
 				600C74941C6B935600A35A7A /* AFSecurityPolicy.m in Sources */,
@@ -546,6 +549,7 @@
 				609A0D8A1C00E8C2002A18D7 /* UIImage+Scaling.swift in Sources */,
 				80EE09DD196A4C8B00B77AB0 /* CaseModelViewController.swift in Sources */,
 				600B48491BF4E57E00A18134 /* ImageViewController.swift in Sources */,
+				60E408AD1C7B72B300437BD8 /* ShippingSummaryViewController.swift in Sources */,
 				60BB272C1C57ACF4004B3534 /* KaedeTextField.swift in Sources */,
 				60BB27311C57ACF4004B3534 /* YoshikoTextField.swift in Sources */,
 				60BB27271C57ACF4004B3534 /* AkiraTextField.swift in Sources */,

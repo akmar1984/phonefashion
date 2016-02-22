@@ -36,8 +36,8 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 cameraPicker.allowsEditing = false
                 cameraPicker.sourceType = .Camera
                 
-                
-                
+            
+
                 self.presentViewController(cameraPicker, animated: true, completion: nil)
             }
             else {

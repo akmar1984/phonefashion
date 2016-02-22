@@ -257,8 +257,8 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
     func extractIphone6(){
         
         
-        let scene = SCNScene(named: "secondCase")
-        //let scene = SCNScene(named: "case_with_applied_modifiers_V2-2")
+      //  let scene = SCNScene(named: "secondCase")
+        let scene = SCNScene(named: "case_with_applied_modifiers_V3-3")
         let emptyScene = SCNScene()
         sceneView!.scene = emptyScene
         
