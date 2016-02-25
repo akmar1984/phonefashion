@@ -25,6 +25,18 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToHome(unwindSegue: UIStoryboardSegue){
+        
+//        
+//                if let sourceViewController = unwindSegue.sourceViewController as? ShippingSummaryViewController {
+//                    performSegueWithIdentifier("unwindSegue", sender: self)
+//                    print("hit the unwindToHome2")
+//                }
+//       
+        
+        
+    }
+    
     @IBAction func getOneNowButton(sender: UIButton) {
         let actionSheet = UIAlertController(title: "Pick one of the options:", message: "", preferredStyle: .ActionSheet)
         let actionCamera = UIAlertAction(title: "Camera", style: .Default) { (action) -> Void in

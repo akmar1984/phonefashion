@@ -2,7 +2,7 @@ import UIKit
 import SceneKit
 import QuartzCore
 
-class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
+class CaseModelViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     
     // UI
     @IBOutlet weak var geometryLabel: UILabel!
@@ -15,19 +15,14 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
     var capturedImage: UIImage!
     var geometryNode: SCNNode = SCNNode()
     var currentAngle: Float = 0.0
-    var totalAmount = NSDecimalNumber()
-
-
     
-    //PAYPAL!
-    var payPalConfiguration =  PayPalConfiguration()
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(animated: Bool) {
-        PayPalMobile.preconnectWithEnvironment(PayPalEnvironmentSandbox)
+       
         if !hasNewImage{
             extractIphone6()
             
@@ -114,7 +109,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         request.HTTPBody = parametersString.dataUsingEncoding(NSUTF8StringEncoding)
         // fire off the request
         //
-       // let urlConnection =
+        // let urlConnection =
         let urlConnection = NSURLConnection(request: request, delegate: self)
         
     }
@@ -131,7 +126,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         
         debugPrint(responseData)
     }
-
+    
     
     @IBAction func cancelButton(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -140,7 +135,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         super.viewDidAppear(animated)
         
         
-        configurePayPal()
+       
         
         sceneView.autoenablesDefaultLighting = true
         let cameraNode = SCNNode()
@@ -151,98 +146,12 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         sceneView.allowsCameraControl = true
         
     }
-    func configurePayPal(){
-        
-        // Set up payPalConfig
-        payPalConfiguration.acceptCreditCards = true
-        payPalConfiguration.payPalShippingAddressOption = .PayPal
-        payPalConfiguration.acceptCreditCards = false
-        payPalConfiguration.merchantName = "FashionPhoneTEST"
-        payPalConfiguration.merchantPrivacyPolicyURL = NSURL(string: "https://www.paypal.com/webapps/mpp/ua/privacy-full")
-        payPalConfiguration.merchantUserAgreementURL = NSURL(string: "https://www.paypal.com/webapps/mpp/ua/useragreement-full")
-        
-        payPalConfiguration.languageOrLocale = NSLocale.preferredLanguages()[0]
-        
-        payPalConfiguration.payPalShippingAddressOption = .PayPal;
-        
-        print("PayPal iOS SDK Version: \(PayPalMobile.libraryVersion())")
-        
-        
-    }
     @IBAction func order(sender: UIButton) {
         
         
-        totalAmount = 5.00
-        let payment = PayPalPayment(amount: totalAmount, currencyCode: "GBP", shortDescription: "iPhone5CasePrint", intent: .Sale)
-        let shippingAddress = PayPalShippingAddress(recipientName: "Name", withLine1: "line1", withLine2: "", withCity: "City", withState: "State", withPostalCode: "postalCode", withCountryCode: "UK")
-        
-        payment.shippingAddress = shippingAddress
-        
-        if payment.processable {
-            
-            
-            
-            let paymentViewController =
-            
-            PayPalPaymentViewController(payment: payment,
-                configuration: payPalConfiguration,
-                delegate: self)
-            
-            presentViewController(paymentViewController, animated: true, completion: nil)
-        }else{
-            
-            // If, for example, the amount was negative or the shortDescription was empty, then
-            // this payment would not be processable. You would want to handle that here.
-            print("Payment not processable\(payment)")
-            
-        }
-        
-    }
-       
-    //MARK: PayPal
-    func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
-        
-        dismissViewControllerAnimated(true, completion: nil)
-        
         
     }
     
-    func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
-        
-        print("Payment processed succesfully:\(completedPayment.confirmation)")
-        dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    func sendPaymentConfirmationToServer(confirmation: NSDictionary) {
-        let foundationDictionary = NSMutableDictionary(dictionary: confirmation)
-        foundationDictionary["amount"] = totalAmount
-        
-        let strServerUrl = "http://52.31.103.182"
-        
-        let manager = AFHTTPSessionManager();
-        manager.responseSerializer.acceptableContentTypes = NSSet(array: ["text/html", "text/json", "application/json"]) as? Set<String>
-        
-        SVProgressHUD.showWithStatus("Sending Payment Confirmation...")
-        manager.POST(strServerUrl, parameters: foundationDictionary,
-            progress: { (progress) -> Void in
-                
-            },
-            success: { (sessionTask, response) -> Void in
-                let dicResult = response as! NSDictionary
-                
-                
-                if(dicResult["result"]?.boolValue == true) {
-                    SVProgressHUD.showSuccessWithStatus(dicResult["message"] as! String)
-                } else {
-                    SVProgressHUD.showErrorWithStatus(dicResult["message"] as! String)
-                }
-                
-            }) { (sessionTask, error) -> Void in
-                SVProgressHUD.showErrorWithStatus(error.localizedDescription)
-        }
-    }
-
     
     
     
@@ -253,11 +162,15 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
             
             
         }
+        if segue.identifier == "orderSegue"{
+            
+            
+        }
     }
     func extractIphone6(){
         
         
-      //  let scene = SCNScene(named: "secondCase")
+        //  let scene = SCNScene(named: "secondCase")
         let scene = SCNScene(named: "case_with_applied_modifiers_V3-3")
         let emptyScene = SCNScene()
         sceneView!.scene = emptyScene
@@ -291,7 +204,7 @@ class CaseModelViewController: UIViewController, PayPalPaymentDelegate, NSURLCon
         
         
     }
-        func panGesture(sender: UIPanGestureRecognizer){
+    func panGesture(sender: UIPanGestureRecognizer){
         
         let translation = sender.translationInView(sender.view!)
         var newAngle = (Float)(translation.x)*(Float)(M_PI)/180.0

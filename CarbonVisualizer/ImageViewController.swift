@@ -40,7 +40,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 //        delegate?.imageViewControllerDidCancel(self, didFinishEditingImage: imageView.image!)
         
 
-        self.performSegueWithIdentifier("segueCase", sender: nil)
+      //  self.performSegueWithIdentifier("segueCase", sender: nil)
+        self.performSegueWithIdentifier("previewCaseSegue", sender: nil)
         
     }
     func previewButton(sender: UIButton){
@@ -94,6 +95,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         doubleTap.numberOfTouchesRequired = 1
        // scrollViewNew.addGestureRecognizer(doubleTap)
         
+        //triple tap showing the 3d case preview
         let tripleTap = UITapGestureRecognizer(target: self, action: "done:")
         tripleTap.numberOfTapsRequired = 3
         tripleTap.numberOfTouchesRequired = 1
@@ -232,7 +234,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
             
         }
         
-        if segue.identifier == "segueCase"{
+        if segue.identifier == "previewCaseSegue"{
 //            let navigationController = segue.destinationViewController as! UINavigationController
 //            let controller = navigationController.topViewController as ItemDetailViewController
             let navigationController = segue.destinationViewController as! UINavigationController
