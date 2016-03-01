@@ -10,6 +10,7 @@ import UIKit
 
 class ShippingViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
+    @IBOutlet weak var emailAddressTextField: KaedeTextField!
     @IBOutlet weak var firstNameTextField: KaedeTextField!
     @IBOutlet weak var lastNameTextField: KaedeTextField!
     @IBOutlet weak var addressLineOneTextField: KaedeTextField!
@@ -54,7 +55,8 @@ class ShippingViewController: UITableViewController, UIPickerViewDelegate, UIPic
             
             let controller = navigationController.topViewController as! ShippingSummaryViewController
             
-            controller.label = countryTextField.text!
+            controller.country = countryTextField.text!
+            controller.emailAddress = emailAddressTextField.text!
             
             
         }

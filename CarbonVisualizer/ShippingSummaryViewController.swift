@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ShippingSummaryViewController: UIViewController, PayPalPaymentDelegate {
+class ShippingSummaryViewController: UITableViewController, PayPalPaymentDelegate {
 
     
 
-    var label: String!
+    var emailAddress: String!
+    var firstName: String!
+    var lastName: String!
+    var country: String!
+    
     
     //Paypal
     var totalAmount = NSDecimalNumber()
@@ -20,12 +24,21 @@ class ShippingSummaryViewController: UIViewController, PayPalPaymentDelegate {
     
     
     
+    @IBOutlet weak var emailAddressLabel: UILabel!
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countryLabel.text = label
+
+        emailAddressLabel.text = emailAddress
+        firstNameLabel.text = firstName
+        lastNameLabel.text = lastName
+        countryLabel.text = country
+        
          configurePayPal()
         
 
