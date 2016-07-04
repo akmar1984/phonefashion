@@ -34,10 +34,10 @@ class ShippingSummaryViewController: UITableViewController, PayPalPaymentDelegat
         super.viewDidLoad()
         
 
-        emailAddressLabel.text = emailAddress
-        firstNameLabel.text = firstName
-        lastNameLabel.text = lastName
-        countryLabel.text = country
+//        emailAddressLabel.text = emailAddress
+//        firstNameLabel.text = firstName
+//        lastNameLabel.text = lastName
+//        countryLabel.text = country //uncomment for the summary
         
          configurePayPal()
         
@@ -51,6 +51,9 @@ class ShippingSummaryViewController: UITableViewController, PayPalPaymentDelegat
         
     }
     
+    @IBAction func proceedToPayment1(sender: UIBarButtonItem) {
+        startPaypal()
+    }
     @IBAction func proceedToPayment(sender: UIButton) {
         startPaypal()
         
@@ -80,7 +83,7 @@ class ShippingSummaryViewController: UITableViewController, PayPalPaymentDelegat
         
     }
     func startPaypal(){
-        
+        print("Starting paypal")
         totalAmount = 5.00
         let payment = PayPalPayment(amount: totalAmount, currencyCode: "GBP", shortDescription: "iPhone5CasePrint", intent: .Sale)
         let shippingAddress = PayPalShippingAddress(recipientName: "Name", withLine1: "line1", withLine2: "", withCity: "City", withState: "State", withPostalCode: "postalCode", withCountryCode: "UK")
@@ -119,6 +122,18 @@ class ShippingSummaryViewController: UITableViewController, PayPalPaymentDelegat
         
         print("Payment processed succesfully:\(completedPayment.confirmation)")
         
+       
+        let paymentConfirmation = completedPayment.confirmation as NSDictionary
+           // print(paymentConfirmation.objectForKey("response"))
+        let responseDict = paymentConfirmation["response"] as! NSDictionary
+        let state = responseDict["state"]
+        print("Here's the state: \(state!)")
+        
+        
+//        if let resultDic = dicResult["response"] as? [String : String]{
+//            let state = resultDic["state"]
+//            print("State is: \(state)")
+//        }
         sendPaymentConfirmationToServer(completedPayment.confirmation);
        // dismissViewControllerAnimated(true, completion: nil)
         
@@ -140,13 +155,16 @@ class ShippingSummaryViewController: UITableViewController, PayPalPaymentDelegat
             },
             success: { (sessionTask, response) -> Void in
                 let dicResult = response as! NSDictionary
+                print(response)
                 
-                
+               
                 if(dicResult["result"]?.boolValue == true) {
                     SVProgressHUD.showSuccessWithStatus("Payment Successful")
-                    //SVProgressHUD.showSuccessWithStatus(dicResult["message"] as! String) //uncomment for dev purposes
                     
-                    self.performSelector("goHomeScreen", withObject: self, afterDelay: 2.0)
+                    
+                    //SVProgressHUD.showSuccessWithStatus(dicResult["message"] as! String) //uncomment for dev purposes
+                    print("dictResult boolValue == true")
+                  //  self.performSelector(#selector(self.goHomeScreen), withObject: self, afterDelay: 2.0)
                     
                 } else {
                     SVProgressHUD.showErrorWithStatus(dicResult["message"] as! String)

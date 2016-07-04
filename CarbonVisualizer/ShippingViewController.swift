@@ -38,9 +38,15 @@ class ShippingViewController: UITableViewController, UIPickerViewDelegate, UIPic
         pickerConf()
         
         getCountryName()
+        fillWithDummies()
         
     }
     
+    func fillWithDummies(){
+        
+        
+        
+    }
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return nil
         
@@ -83,10 +89,10 @@ class ShippingViewController: UITableViewController, UIPickerViewDelegate, UIPic
         toolBar.sizeToFit()
         
         
-        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "donePicker")
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(donePicker))
         
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancelPicker")
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelPicker))
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true

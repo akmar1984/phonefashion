@@ -85,18 +85,18 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         previewButton.frame = CGRectMake(0, 10, 70, 60)
         previewButton.setTitle("Preview", forState: UIControlState.Normal)
         previewButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        previewButton.addTarget(self, action: "previewButton:", forControlEvents: .TouchUpInside)
+        previewButton.addTarget(self, action: #selector(ImageViewController.previewButton(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(previewButton)
 
         
         
-        let doubleTap = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(scrollViewDoubleTapped(_:)))
         doubleTap.numberOfTapsRequired = 2
         doubleTap.numberOfTouchesRequired = 1
        // scrollViewNew.addGestureRecognizer(doubleTap)
         
         //triple tap showing the 3d case preview
-        let tripleTap = UITapGestureRecognizer(target: self, action: "done:")
+        let tripleTap = UITapGestureRecognizer(target: self, action: #selector(done(_:)))
         tripleTap.numberOfTapsRequired = 3
         tripleTap.numberOfTouchesRequired = 1
         scrollViewNew.addGestureRecognizer(tripleTap)
@@ -128,10 +128,14 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     func transparentOverlay(){
        // let offset: CGFloat = 40.0
-        
-         //overlay image width should be width:  80mm x 134mm=  226points x 379points, (154mm x 88mm = 436.32p x 249.12p)
+         //Overlay critical image area for iPhone 5 & 5s = 134mm x 80mm = 379.84p x 226.77p
+        //Overlay critical image area for iPhone 6 & 6s = 154mm x 88mm = 436.32p x 249.12p
+        //Overlay critical image area for iPhone 6 plus = 166mm x 92mm = 470.55p x 260.79p
 
-        let overlayFrame = CGRectMake(0, 0, 249.12, 436.32)
+
+        
+        //let overlayFrame = CGRectMake(0, 0, 249.12, 436.32) //iPhone 6
+        let overlayFrame = CGRectMake(0, 0, 260.79, 470.55) //iPhone 6plus
       //  let overlayFrame = CGRectMake(offset, offset, view.bounds.size.width - offset * 2, view.bounds.size.height - offset * 2)
         overlay = UIView(frame: overlayFrame)
 //        overlay.alpha = 0.1

@@ -48,11 +48,11 @@ class EditedImageViewController: UIViewController, UIScrollViewDelegate {
         cancelButton.setTitle("Cancel", forState: UIControlState.Normal)
         cancelButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         
-        cancelButton.addTarget(self, action: "cancelButton:", forControlEvents: .TouchUpInside)
+        cancelButton.addTarget(self, action: #selector(cancelButtonAction), forControlEvents: .TouchUpInside)
         view.addSubview(cancelButton)
 
     }
-    func cancelButton(sender: UIButton){
+    func cancelButtonAction(sender: UIButton){
         dismissViewControllerAnimated(true, completion: nil)
     }
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
